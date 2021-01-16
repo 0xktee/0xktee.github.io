@@ -1,28 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from 'framer-motion';
 
-import Layout from "../components/layout"
-import { makeStyles, Typography } from "@material-ui/core"
+import Layout from '../components/layout';
+import { makeStyles, Typography } from '@material-ui/core';
 
-const IndexPage = () => (
-  <Layout>
-    <motion.div
-      animate={{ x: 100 }}
-      transition={{ ease: "easeOut", duration: 2 }}
-    >
+const IndexPage = () => {
+  let [visible, setVisible] = useState(false);
+  let string = 'heelloo asaz sss';
+  let words = string.split(' ');
+
+  return (
+    <Layout>
       <Typography variant="h3" component="h2">
         Hello there.
       </Typography>
+
       <Typography variant="h3" component="h3">
-        I am
+        I am Tee.
       </Typography>
-      <Typography variant="h3" component="h1">
+      <Typography variant="h5" component="h1">
         Korrawich Khosripetch.
       </Typography>
-    </motion.div>
-  </Layout>
-)
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

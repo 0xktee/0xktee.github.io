@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import "../styles/layout.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../styles/layout.css';
 
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
-import Menubar from "./menubar"
+import { Grid } from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Menubar from './menubar';
 
 const THEME = createMuiTheme({
   typography: {
@@ -20,13 +21,17 @@ const THEME = createMuiTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
   },
-})
+});
 
 const Layout = ({ children }) => {
   return (
     <MuiThemeProvider theme={THEME}>
       <Menubar />
-      <main>{children}</main>
+      <Grid justify="center" container>
+        <Grid xs={11} item>
+          <main>{children}</main>
+        </Grid>
+      </Grid>
       {/* <footer style={{
           marginTop: `2rem`
         }}>
@@ -35,11 +40,11 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer> */}
     </MuiThemeProvider>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

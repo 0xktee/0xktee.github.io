@@ -1,6 +1,7 @@
-import React, { Fragment } from "react"
-import { Link } from "gatsby"
-import "../styles/menubar.css"
+import React, { Fragment } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
+import '../styles/menubar.css';
 
 import {
   makeStyles,
@@ -9,21 +10,21 @@ import {
   Avatar,
   Button,
   Grid,
-} from "@material-ui/core"
+} from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   topBorder: {
-    "border-top-style": "solid",
-    "border-width": "2px",
-    "border-color": "#feca2f",
-    width: "100%",
+    'border-top-style': 'solid',
+    'border-width': '2px',
+    'border-color': '#feca2f',
+    width: '100%',
   },
   marginMenuDesktop: {
     marginBottom: theme.spacing(2),
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up('md')]: {
       paddingLeft: theme.spacing(1),
       paddingRight: theme.spacing(1),
     },
@@ -33,21 +34,24 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(4),
     height: theme.spacing(4),
   },
+  linkButton: {
+    textDecoration: 'none',
+  },
   textButton: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
     fontWeight: theme.typography.fontWeightMedium,
-    textTransform: "none",
+    textTransform: 'none',
   },
   textButtonLast: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(2),
     fontWeight: theme.typography.fontWeightMedium,
-    textTransform: "none",
+    textTransform: 'none',
   },
-}))
+}));
 
 const MenuBar = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Fragment>
@@ -71,34 +75,46 @@ const MenuBar = () => {
 
             <Grid item>
               <Fragment className={classes.sectionDesktop}>
-                <Button
-                  component={Link}
-                  to="/about"
-                  className={classes.textButton}
-                >
-                  About
-                </Button>
-                <Button
-                  component={Link}
-                  to="/projects"
-                  className={classes.textButton}
-                >
-                  Projects
-                </Button>
-                <Button
-                  component={Link}
+                <Link to="/about" className={classes.linkButton}>
+                  <Button
+                    className={classes.textButton}
+                    component={motion.button}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    About
+                  </Button>
+                </Link>
+                <Link to="/projects" className={classes.linkButton}>
+                  <Button
+                    className={classes.textButton}
+                    component={motion.button}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Projects
+                  </Button>
+                </Link>
+                <Link
                   href="https://github.com/knwch"
-                  className={classes.textButtonLast}
+                  className={classes.linkButton}
                 >
-                  Github
-                </Button>
+                  <Button
+                    className={classes.textButtonLast}
+                    component={motion.button}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Github
+                  </Button>
+                </Link>
               </Fragment>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
     </Fragment>
-  )
-}
+  );
+};
 
-export default MenuBar
+export default MenuBar;
