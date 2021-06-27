@@ -81,15 +81,20 @@
 
     &.text {
       color: white;
-
-      font-size: 1.75rem;
       font-weight: 500;
+      font-size: 1.4rem;
 
-      &:hover {
+      @media screen and (min-width: 600px) {
+        font-size: 1.75rem;
+      }
+
+      &.phone:hover {
         color: #2cf1aa;
+        text-decoration: none;
       }
 
       &.email:hover {
+        color: #2cf1aa;
         cursor: pointer;
       }
     }

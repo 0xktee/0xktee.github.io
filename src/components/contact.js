@@ -125,7 +125,7 @@ const Contact = () => {
                   Phone
                 </Typography>
                 <br />
-                <Typography className="typo-contact text" variant="span">
+                <Typography className="typo-contact text phone" variant="span">
                   +66 (0) 841 600 951
                 </Typography>
               </div>
