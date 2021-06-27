@@ -30,7 +30,7 @@ const THEME = createMuiTheme({
 const Layout = ({ children }) => {
   return (
     <>
-      <Helmet htmlAttributes="en">
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Korrawich's Portfolio</title>
         <meta

@@ -176,7 +176,6 @@ const MenuBar = () => {
         </List>
         <IconButton
           component={motion.div}
-          aria-command-name="true"
           whileTap={{ scale: 0.8 }}
           className="tab-icon"
           onClick={() => toggleOpen()}
