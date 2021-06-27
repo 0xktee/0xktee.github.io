@@ -1,12 +1,12 @@
-import React, { Fragment } from "react"
-import { motion, useCycle } from "framer-motion"
-import { Link } from "gatsby"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import "../styles/menubar.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBook, faUserAstronaut } from "@fortawesome/free-solid-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import Logo from "../assets/logo-plain.svg"
+import React, { Fragment } from 'react';
+import { motion, useCycle } from 'framer-motion';
+import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import '../styles/menubar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Logo from '../assets/logo-plain.svg';
 
 import {
   AppBar,
@@ -18,42 +18,42 @@ import {
   List,
   ListItem,
   ListItemText,
-} from "@material-ui/core"
+} from '@material-ui/core';
 
 const sidebar = {
   open: {
     clipPath: `circle(250px at 260px 40px)`,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 20,
       restDelta: 2,
     },
   },
   closed: {
-    clipPath: "circle(30px at 260px 40px)",
+    clipPath: 'circle(30px at 260px 40px)',
     transition: {
       delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
     },
   },
-}
+};
 
 const ulvariants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    display: "block",
+    display: 'block',
   },
   closed: {
     transition: {
       staggerChildren: 0.05,
       staggerDirection: -1,
-      when: "afterChildren",
+      when: 'afterChildren',
     },
-    display: "none",
+    display: 'none',
   },
-}
+};
 
 const livariants = {
   open: {
@@ -70,10 +70,10 @@ const livariants = {
       x: { stiffness: 1000 },
     },
   },
-}
+};
 
 const MenuBar = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   const renderDesktopMenu = (
     <div className="desktop-section">
@@ -90,7 +90,7 @@ const MenuBar = () => {
       </Link>
       <Link className="button-desktop">
         <Button
-          onClick={() => scrollTo("#projects")}
+          onClick={() => scrollTo('#projects')}
           className="text-button"
           component={motion.button}
           whileHover={{ scale: 1.1 }}
@@ -110,11 +110,11 @@ const MenuBar = () => {
         </Button>
       </Link>
     </div>
-  )
+  );
 
   const renderMobileMenu = (
     <div className="mobile-section">
-      <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
+      <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
         <motion.div className="tab-background" variants={sidebar} />
         <List
           component={motion.ul}
@@ -140,8 +140,8 @@ const MenuBar = () => {
           <Link className="button-mobile">
             <ListItem
               onClick={() => {
-                toggleOpen()
-                scrollTo("#projects")
+                toggleOpen();
+                scrollTo('#projects');
               }}
               component={motion.li}
               variants={livariants}
@@ -176,6 +176,7 @@ const MenuBar = () => {
         </List>
         <IconButton
           component={motion.div}
+          aria-command-name="true"
           whileTap={{ scale: 0.8 }}
           className="tab-icon"
           onClick={() => toggleOpen()}
@@ -188,8 +189,8 @@ const MenuBar = () => {
               stroke="#212121"
               strokeLinecap="round"
               variants={{
-                closed: { d: "M 2 2.5 L 20 2.5" },
-                open: { d: "M 3 16.5 L 17 2.5" },
+                closed: { d: 'M 2 2.5 L 20 2.5' },
+                open: { d: 'M 3 16.5 L 17 2.5' },
               }}
             />
             <motion.path
@@ -210,15 +211,15 @@ const MenuBar = () => {
               stroke="#212121"
               strokeLinecap="round"
               variants={{
-                closed: { d: "M 2 16.346 L 20 16.346" },
-                open: { d: "M 3 2.5 L 17 16.346" },
+                closed: { d: 'M 2 16.346 L 20 16.346' },
+                open: { d: 'M 3 2.5 L 17 16.346' },
               }}
             />
           </svg>
         </IconButton>
       </motion.nav>
     </div>
-  )
+  );
 
   return (
     <Fragment>
@@ -239,7 +240,12 @@ const MenuBar = () => {
                     rotate: -15,
                   }}
                 >
-                  <Avatar variant="square" className="web-logo" src={Logo} />
+                  <Avatar
+                    variant="square"
+                    className="web-logo"
+                    src={Logo}
+                    alt="knwch"
+                  />
                 </motion.div>
               </Link>
             </Grid>
@@ -250,7 +256,7 @@ const MenuBar = () => {
       </AppBar>
       {renderMobileMenu}
     </Fragment>
-  )
-}
+  );
+};
 
-export default MenuBar
+export default MenuBar;
