@@ -1,0 +1,105 @@
+$md: 960px;
+$spacing: 8px;
+$mobile-spacing: $spacing * 3;
+$desktop-spacing: $spacing * 7;
+$border: #2cf1aa;
+$background-dark: #212121;
+
+.MuiAppBar-root {
+  &.top-border {
+    border-top-style: solid;
+    border-width: 3px;
+    border-color: $border;
+    width: 100%;
+  }
+
+  &.bar-color {
+    background-color: $background-dark;
+  }
+
+  &.responsive-x-margin {
+    padding-left: $mobile-spacing;
+    padding-right: $mobile-spacing;
+    @media screen and (min-width: $md) {
+      padding-left: $desktop-spacing;
+      padding-right: $desktop-spacing;
+    }
+  }
+
+  .web-logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.desktop-section {
+  display: none;
+  @media screen and (min-width: $md) {
+    display: flex;
+  }
+
+  .button-desktop {
+    text-decoration: none;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .text-button {
+    font-weight: 600;
+    text-transform: none;
+  }
+}
+
+.mobile-section {
+  display: flex;
+  @media screen and (min-width: $md) {
+    display: none;
+  }
+
+  .tab-icon {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    z-index: 1;
+  }
+
+  .list-mobile {
+    position: absolute;
+    width: 150px;
+    right: 0px;
+    z-index: 1;
+  }
+
+  .button-mobile {
+    text-decoration: none;
+    color: #212121;
+  }
+
+  .text-button {
+    text-align: right;
+    margin-bottom: $spacing;
+
+    .MuiListItemText-primary {
+      font-weight: 500;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .awesome-icon {
+    margin-left: 1rem;
+    color: #212121;
+  }
+}
+
+.tab-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #2cf1aa;
+  z-index: 1;
+}

@@ -1,0 +1,101 @@
+.header-contact {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fff;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.describe-contact {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.MuiCardContent-root {
+  &:last-child {
+    padding-bottom: 16px !important;
+  }
+}
+
+.MuiCard-root.social-card {
+  &:hover {
+    border-color: #000;
+
+    .MuiCardContent-root.social-container {
+      background-color: #2cf1aa;
+
+      .icon-social {
+        // color: #2cf1aa;
+        color: #212121;
+      }
+      .text-social {
+        // color: #2cf1aa;
+        color: #212121;
+      }
+    }
+  }
+  cursor: pointer;
+
+  .MuiCardContent-root.social-container {
+    display: inline-block;
+    width: 100%;
+    background-color: #212121;
+
+    // &:hover {
+    //   background-color: #2cf1aa;
+
+    //   .icon-social {
+    //     // color: #2cf1aa;
+    //     color: #212121;
+    //   }
+    //   .text-social {
+    //     // color: #2cf1aa;
+    //     color: #212121;
+    //   }
+    // }
+
+    .icon-social {
+      color: white;
+      vertical-align: middle;
+    }
+
+    .text-social {
+      font-weight: 400;
+      padding-left: 16px;
+    }
+  }
+}
+
+.group-contact {
+  &.first {
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
+  .typo-contact {
+    color: white;
+    font-weight: 400;
+
+    &.text {
+      color: white;
+
+      font-size: 1.75rem;
+      font-weight: 500;
+
+      &:hover {
+        color: #2cf1aa;
+      }
+
+      &.email:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.icon-copy {
+  color: white;
+}

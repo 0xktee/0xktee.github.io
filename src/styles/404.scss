@@ -1,0 +1,10 @@
+.MuiButton-root.notfound-button {
+  font-family: "Airbnb Cereal App", sans-serif;
+  font-weight: 500;
+  border-radius: 36px;
+  text-transform: none;
+  background-color: #2cf1aa;
+  &:hover {
+    background-color: #29df9c;
+  }
+}

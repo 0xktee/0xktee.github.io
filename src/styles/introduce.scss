@@ -1,0 +1,64 @@
+$stroke: #000;
+$mint: #43fcb8;
+
+#nick-name {
+  position: relative;
+  display: block;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 6rem;
+
+  margin-top: 28px;
+  margin-bottom: 28px;
+
+  letter-spacing: 6px;
+
+  color: white;
+  text-shadow: -2px 0 $stroke, 0 -2px $stroke, 2px 0 $stroke, 0 2px $stroke,
+    2px 2px $stroke, -2px -2px $stroke, -2px 2px $stroke, 2px -2px $stroke,
+    6px 6px $mint;
+}
+
+.hello-typo {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+}
+
+.info-typo {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: $mint;
+  display: block;
+}
+
+.describe-typo {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+
+  #role {
+    font-weight: 600;
+    font-size: 1.15rem;
+    font-style: italic;
+    padding-left: 1px;
+    padding-right: 4px;
+    color: $mint;
+  }
+
+}
+
+.MuiButton-root.reach-button {
+  margin-top: 24px;
+  border-radius: 36px;
+  font-weight: 500;
+  text-transform: none;
+  background-color: $mint;
+
+
+  &:hover {
+    background-color:#3ce4a6;
+  }
+}

@@ -1,0 +1,114 @@
+@import "../styles/typography.scss";
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Airbnb Cereal App", sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+$xs: 0px;
+$sm: 600px;
+$top-border-height: 3px;
+$bar-height-default: 56px + $top-border-height;
+$bar-height-xs: 48px + $top-border-height;
+$bar-height-sm: 64px + $top-border-height;
+
+.box {
+  &.box-first {
+    min-height: calc(100vh - #{$bar-height-default});
+
+    @media screen and (min-width: $xs) and (orientation: landscape) {
+      min-height: calc(100vh - #{$bar-height-xs});
+    }
+
+    @media screen and (min-width: $sm) {
+      min-height: calc(100vh - #{$bar-height-sm});
+    }
+
+    .padding-content {
+      padding-bottom: $bar-height-default;
+
+      @media screen and (min-width: $xs) and (orientation: landscape) {
+        padding-bottom: $bar-height-xs;
+      }
+
+      @media screen and (min-width: $sm) {
+        padding-bottom: $bar-height-sm;
+      }
+    }
+  }
+
+  &.box-default {
+    min-height: calc(100vh);
+    @media screen and (min-width: $xs) and (orientation: landscape) {
+      min-height: calc(100vh);
+    }
+
+    @media screen and (min-width: $sm) {
+      min-height: calc(100vh);
+    }
+  }
+
+  &.dark-background {
+    background-color: #212121;
+  }
+
+  &.light-background {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      background-image: url("../assets/15120.svg");
+      background-size: 350px 350px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: "";
+      will-change: transform;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: #161616;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 400;
+
+  .footer-heart {
+    text-align: center;
+  }
+
+  .footer-heart a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+      color: #2cf1aa;
+    }
+  }
+
+  .emoji {
+    vertical-align: baseline;
+  }
+}

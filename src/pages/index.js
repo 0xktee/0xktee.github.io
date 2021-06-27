@@ -1,30 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
-
-import { motion, AnimatePresence } from 'framer-motion';
-
-import Layout from '../components/layout';
-import { makeStyles, Typography } from '@material-ui/core';
+import React from "react"
+import Layout from "../components/layout"
+import Introduce from "../components/introduce"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
 
 const IndexPage = () => {
-  let [visible, setVisible] = useState(false);
-  let string = 'heelloo asaz sss';
-  let words = string.split(' ');
-
   return (
     <Layout>
-      <Typography variant="h3" component="h2">
-        Hello there.
-      </Typography>
-
-      <Typography variant="h3" component="h3">
-        I am Tee.
-      </Typography>
-      <Typography variant="h5" component="h1">
-        Korrawich Khosripetch.
-      </Typography>
+      <Introduce />
+      <Projects />
+      <Contact />
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage

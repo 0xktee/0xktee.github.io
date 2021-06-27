@@ -5,46 +5,53 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../styles/layout.css';
+import React from "react"
+import PropTypes from "prop-types"
+import "../styles/layout.scss"
 
-import { Grid } from '@material-ui/core';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Menubar from './menubar';
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
+import Menubar from "./menubar"
 
 const THEME = createMuiTheme({
+  palette: {
+    type: "dark",
+  },
   typography: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Airbnb Cereal App', sans-serif`,
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
+    fontWeightBold: 600,
   },
-});
+})
 
 const Layout = ({ children }) => {
   return (
-    <MuiThemeProvider theme={THEME}>
-      <Menubar />
-      <Grid justify="center" container>
-        <Grid xs={11} item>
-          <main>{children}</main>
-        </Grid>
-      </Grid>
-      {/* <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer> */}
-    </MuiThemeProvider>
-  );
-};
+    <>
+      <MuiThemeProvider theme={THEME}>
+        <Menubar />
+        <main>{children}</main>
+
+        <footer>
+          <div className="footer-heart">
+            Made with
+            <span role="img" aria-label="green-heart" className="emoji">
+              &nbsp;💚&nbsp;
+            </span>
+            by&nbsp;
+            <a href="https://github.com/knwch" rel="noreferrer" target="_blank">
+              &nbsp;t.&nbsp;
+            </a>
+          </div>
+        </footer>
+      </MuiThemeProvider>
+    </>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout
