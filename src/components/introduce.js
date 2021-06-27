@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Typography, Box, Grid, Button } from '@material-ui/core';
+import { Typography, Box, Grid, Button, Hidden } from '@material-ui/core';
 import { m, LazyMotion, domAnimation } from 'framer-motion';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import dayjs from 'dayjs';
@@ -64,7 +64,7 @@ const Introduce = () => {
           className="padding-content"
           container
         >
-          <Grid item xs={5} sm={4} md={3}>
+          <Grid component={Hidden} only='xs' item sm={4} md={3}>
             <m.div
               style={{
                 zIndex: 1,
@@ -91,7 +91,7 @@ const Introduce = () => {
               </svg>
             </m.div>
           </Grid>
-          <Grid item xs={6} sm={5} md={4}>
+          <Grid item xs={10} sm={5} md={4}>
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
