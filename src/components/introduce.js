@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Typography, Box, Grid, Button, Hidden } from '@material-ui/core';
+import { Typography, Box, Grid, Button, makeStyles } from '@material-ui/core';
 import { m, LazyMotion, domAnimation } from 'framer-motion';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import dayjs from 'dayjs';
@@ -8,7 +8,16 @@ import medi from '../assets/lottiefiles/57088-no-ads.json';
 
 import '../styles/introduce.scss';
 
+const useStyles = makeStyles((theme) => ({
+  lottieContainer: {
+    [theme.breakpoints.only('xs')]: {
+      display: 'none',
+    },
+  },
+}));
+
 const Introduce = () => {
+  const classes = useStyles();
   const animationContainer = useRef();
 
   useEffect(() => {
@@ -64,7 +73,7 @@ const Introduce = () => {
           className="padding-content"
           container
         >
-          <Grid component={Hidden} only='xs' item sm={4} md={3}>
+          <Grid className={classes.lottieContainer} item sm={4} md={3}>
             <m.div
               style={{
                 zIndex: 1,
@@ -91,6 +100,7 @@ const Introduce = () => {
               </svg>
             </m.div>
           </Grid>
+
           <Grid item xs={10} sm={5} md={4}>
             <m.div
               initial={{ opacity: 0 }}
