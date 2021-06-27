@@ -106,7 +106,6 @@ const Introduce = () => {
               </Typography>
 
               <div id="nick-name">tee.</div>
-              <div>test</div>
 
               <Typography className="describe-typo" variant="span">
                 I'm a <span id="role">developer</span> who loves making
