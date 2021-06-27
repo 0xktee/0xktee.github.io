@@ -6,7 +6,7 @@ import "../styles/menubar.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBook, faUserAstronaut } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import Logo from "../assets/logo-white-96.png"
+import Logo from "../assets/logo-plain.svg"
 
 import {
   AppBar,

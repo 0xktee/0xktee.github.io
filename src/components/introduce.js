@@ -4,7 +4,7 @@ import { m, LazyMotion, domAnimation } from 'framer-motion';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import dayjs from 'dayjs';
 import lottie from 'lottie-web';
-import medi from '../assets/57088-no-ads.json';
+import medi from '../assets/lottiefiles/57088-no-ads.json';
 
 import '../styles/introduce.scss';
 
