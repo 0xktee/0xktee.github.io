@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import '../styles/layout.scss';
@@ -28,6 +28,21 @@ const THEME = createMuiTheme({
 });
 
 const Layout = ({ children }) => {
+  const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      const x = e.clientX - 16;
+      const y = e.clientY - 16;
+      setCursorXY({ x, y });
+    };
+    window.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+    };
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -38,6 +53,7 @@ const Layout = ({ children }) => {
           content="A developer portfolio website of Korrawich Khosripetch."
         />
       </Helmet>
+
       <MuiThemeProvider theme={THEME}>
         <Menubar />
         <main>{children}</main>
@@ -55,6 +71,12 @@ const Layout = ({ children }) => {
           </div>
         </footer>
       </MuiThemeProvider>
+      <div
+        className="cursor"
+        style={{
+          transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
+        }}
+      />
     </>
   );
 };

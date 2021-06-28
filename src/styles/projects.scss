@@ -19,6 +19,16 @@ svg.triangle {
   font-weight: 500;
   font-size: 2rem;
   color: #212121;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.describe-project {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #212121;
+  display: block;
+  padding-bottom: 8px;
 }
 
 .MuiCard-root.card-project {
@@ -31,9 +41,8 @@ svg.triangle {
   cursor: pointer;
 
   &:hover {
-    color: white;
+    color: #2cf1aa;
     background-color: #212121;
-    border-color: #2cf1aa;
     -webkit-transition: background-color 100ms linear;
     -ms-transition: background-color 100ms linear;
     transition: background-color 100ms linear;
@@ -59,8 +68,6 @@ svg.triangle {
     align-items: flex-start;
     color: #212121;
     background-color: white;
-    border-color: #2cf1aa;
-    border-width: 3px;
     cursor: auto;
 
     div.card-describe-container {
@@ -161,5 +168,13 @@ svg.triangle {
   &:hover {
     color: #2cf1aa;
     background-color: #212121;
+  }
+}
+
+#githubl1 {
+  color: #212121;
+
+  &:hover {
+    background-color: #2cf1aa;
   }
 }

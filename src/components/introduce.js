@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 const Introduce = () => {
   const classes = useStyles();
   const animationContainer = useRef();
+  const constraintsRef = useRef();
 
   useEffect(() => {
     lottie.setQuality('low');
@@ -30,7 +31,7 @@ const Introduce = () => {
         autoplay: true,
         animationData: medi,
         rendererSettings: {
-          viewBoxSize: '0 50 1890 1080',
+          viewBoxSize: '410 0 1080 1080',
           progressiveLoad: true,
         },
       })
@@ -66,7 +67,11 @@ const Introduce = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <Box display="flex" className="box box-first dark-background">
+      <Box
+        display="flex"
+        className="box box-first dark-background"
+        ref={constraintsRef}
+      >
         <Grid
           justify="center"
           alignItems="center"
@@ -78,14 +83,17 @@ const Introduce = () => {
               style={{
                 zIndex: 1,
                 position: 'relative',
+                marginRight: 64,
               }}
               ref={animationContainer}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                delay: 0.35,
                 opacity: { ease: 'circIn', duration: 1 },
               }}
+              drag
+              dragConstraints={constraintsRef}
+              dragElastic={0.75}
             >
               <svg
                 height="100%"
@@ -95,8 +103,20 @@ const Introduce = () => {
                   top: '0',
                   left: '0',
                 }}
+                overflow="visible"
               >
-                <circle cx="50%" cy="50%" r="35%" fill="white" />
+                <circle cx="50%" cy="50%" r="42.5%" fill="white" />
+                <text
+                  x="-5%"
+                  y="20%"
+                  fill="white"
+                  transform="translate(0, 0) rotate(-30)"
+                  style={{
+                    fontWeight: 500,
+                  }}
+                >
+                  drag me!
+                </text>
               </svg>
             </m.div>
           </Grid>
@@ -106,7 +126,6 @@ const Introduce = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                delay: 1,
                 duration: 1,
                 ease: 'easeIn',
               }}

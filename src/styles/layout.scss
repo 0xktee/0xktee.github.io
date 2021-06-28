@@ -1,9 +1,13 @@
-@import "../styles/typography.scss";
+@import '../styles/typography.scss';
+
+* {
+  cursor: none !important;
+}
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: "Airbnb Cereal App", sans-serif;
+  font-family: 'Airbnb Cereal App', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -15,10 +19,22 @@ body {
   color: hsla(0, 0%, 0%, 0.8);
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 0 0 2px #fd4347 inset;
+  border-radius: 16px;
+  z-index: 100;
 }
 
 $xs: 0px;
@@ -73,13 +89,13 @@ $bar-height-sm: 64px + $top-border-height;
     position: relative;
 
     &::before {
-      background-image: url("../assets/15120.svg");
+      background-image: url('../assets/15120.svg');
       background-size: 350px 350px;
       position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
-      content: "";
+      content: '';
       will-change: transform;
       width: 100%;
       height: 100%;

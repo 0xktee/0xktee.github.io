@@ -124,16 +124,6 @@ const Projects = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      {/* <svg
-        className="triangle top"
-        width="100%"
-        height="70"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polygon points="0 0, 100 100, 100 0" style={{ fill: "#212121" }} />
-      </svg> */}
       <Box
         id="projects"
         display="flex"
@@ -149,6 +139,14 @@ const Projects = () => {
             <Grid xs={12} item>
               <Typography className="header-project" variant="span">
                 Feature Projects 📔
+              </Typography>
+              <Typography className="describe-project" variant="span">
+                Some of the projects which I worked on, also you can see more on
+                my{' '}
+                <Link href="https://github.com/knwch" target="_blank" id="githubl1">
+                  github
+                </Link>
+                .
               </Typography>
             </Grid>
 
@@ -250,16 +248,6 @@ const Projects = () => {
           </Grid>
         </Grid>
       </Box>
-      {/* <svg
-        className="triangle bottom"
-        width="100%"
-        height="70"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polygon points="0 0, 100 100, 0 100" style={{ fill: "#212121" }} />
-      </svg> */}
     </LazyMotion>
   );
 };
