@@ -1,13 +1,12 @@
 import React, { useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Box, Grid, Button } from '@material-ui/core';
 import { Link } from 'gatsby';
 import lottie from 'lottie-web';
+import Layout from '../components/layout';
 
 import lonely from '../assets/lottiefiles/36395-lonely-404.json';
 
 import '../styles/404.scss';
-import '../styles/layout.scss';
 
 const NotFoundPage = () => {
   const animation404Container = useRef();
@@ -31,18 +30,10 @@ const NotFoundPage = () => {
   }, []);
 
   return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Korrawich's Portfolio</title>
-        <meta
-          name="description"
-          content="A developer portfolio website of Korrawich Khosripetch."
-        />
-      </Helmet>
+    <Layout>
       <Box
         display="flex"
-        className="box box-default"
+        className="box box-first"
         alignItems="center"
         justifyContent="center"
       >
@@ -61,7 +52,7 @@ const NotFoundPage = () => {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </Layout>
   );
 };
 
