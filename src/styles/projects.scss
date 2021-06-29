@@ -151,8 +151,23 @@ svg.triangle {
   margin-right: 8px;
 }
 
-.MuiButton-root.button-github {
+.MuiButton-root.button-demo {
   margin-left: auto;
+  margin-right: 4px;
+  margin-bottom: 8px;
+
+  text-transform: none;
+  color: #212121;
+  border-color: rgba(0, 0, 0, 0.23);
+  border-radius: 36px;
+
+  &:hover {
+    color: #2cf1aa;
+    background-color: #212121;
+  }
+}
+
+.MuiButton-root.button-github {
   margin-right: 8px;
   margin-bottom: 8px;
 

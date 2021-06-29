@@ -143,7 +143,11 @@ const Projects = () => {
               <Typography className="describe-project" variant="span">
                 Some of the projects which I worked on, also you can see more on
                 my{' '}
-                <Link href="https://github.com/knwch" target="_blank" id="githubl1">
+                <Link
+                  href="https://github.com/knwch"
+                  target="_blank"
+                  id="githubl1"
+                >
                   github
                 </Link>
                 .
@@ -230,11 +234,21 @@ const Projects = () => {
                       <CardActions>
                         <Button
                           component={Link}
-                          href={projectsData[selectedId - 1].url}
+                          href={projectsData[selectedId - 1].demo}
+                          target="_blank"
+                          className="button-demo"
+                          variant="outlined"
+                          disabled={projectsData[selectedId - 1].demo === ''}
+                        >
+                          Website
+                        </Button>
+                        <Button
+                          component={Link}
+                          href={projectsData[selectedId - 1].git}
                           target="_blank"
                           className="button-github"
                           variant="outlined"
-                          disabled={projectsData[selectedId - 1].url === ''}
+                          disabled={projectsData[selectedId - 1].git === ''}
                           endIcon={<Github size={18} />}
                         >
                           See on
