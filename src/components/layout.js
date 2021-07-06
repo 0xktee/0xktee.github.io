@@ -29,7 +29,7 @@ const THEME = createMuiTheme({
 });
 
 const Layout = ({ children }) => {
-  // const { isSplashFinish } = useContext(SplashContext);
+  const { isSplashFinish } = useContext(SplashContext);
 
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
 
@@ -58,35 +58,31 @@ const Layout = ({ children }) => {
       </Helmet>
 
       <MuiThemeProvider theme={THEME}>
-        <SplashContext.Consumer>
-          {(context) =>
-            context.isSplashFinish ? (
-              <>
-                <Menubar />
-                <main>{children}</main>
+        {isSplashFinish ? (
+          <>
+            <Menubar />
+            <main>{children}</main>
 
-                <footer id="footer">
-                  <div className="footer-heart">
-                    Made with
-                    <span role="img" aria-label="green-heart" className="emoji">
-                      &nbsp;💚&nbsp;
-                    </span>
-                    by&nbsp;
-                    <a
-                      href="https://github.com/knwch"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      &nbsp;t.&nbsp;
-                    </a>
-                  </div>
-                </footer>
-              </>
-            ) : (
-              <Splash />
-            )
-          }
-        </SplashContext.Consumer>
+            <footer id="footer">
+              <div className="footer-heart">
+                Made with
+                <span role="img" aria-label="green-heart" className="emoji">
+                  &nbsp;💚&nbsp;
+                </span>
+                by&nbsp;
+                <a
+                  href="https://github.com/knwch"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  &nbsp;t.&nbsp;
+                </a>
+              </div>
+            </footer>
+          </>
+        ) : (
+          <Splash />
+        )}
       </MuiThemeProvider>
 
       <div
