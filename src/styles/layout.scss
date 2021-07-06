@@ -84,6 +84,10 @@ $bar-height-sm: 64px + $top-border-height;
     background-color: #212121;
   }
 
+  &.mint-background {
+    background-color: #2cf1aa;
+  }
+
   &.light-background {
     overflow: hidden;
     position: relative;

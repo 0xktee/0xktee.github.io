@@ -5,13 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import '../styles/layout.scss';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Menubar from './menubar';
+import Splash from '../components/splash';
+import { SplashContext } from '../contexts/splashcontext';
 
 const THEME = createMuiTheme({
   palette: {
@@ -19,7 +21,6 @@ const THEME = createMuiTheme({
   },
   typography: {
     fontFamily: `'Airbnb Cereal App', sans-serif`,
-    fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
@@ -28,6 +29,8 @@ const THEME = createMuiTheme({
 });
 
 const Layout = ({ children }) => {
+  const { isSplashFinish } = useContext(SplashContext);
+
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
 
   useEffect(() => {
@@ -55,22 +58,33 @@ const Layout = ({ children }) => {
       </Helmet>
 
       <MuiThemeProvider theme={THEME}>
-        <Menubar />
-        <main>{children}</main>
+        {isSplashFinish ? (
+          <>
+            <Menubar />
+            <main>{children}</main>
 
-        <footer>
-          <div className="footer-heart">
-            Made with
-            <span role="img" aria-label="green-heart" className="emoji">
-              &nbsp;💚&nbsp;
-            </span>
-            by&nbsp;
-            <a href="https://github.com/knwch" rel="noreferrer" target="_blank">
-              &nbsp;t.&nbsp;
-            </a>
-          </div>
-        </footer>
+            <footer id="footer">
+              <div className="footer-heart">
+                Made with
+                <span role="img" aria-label="green-heart" className="emoji">
+                  &nbsp;💚&nbsp;
+                </span>
+                by&nbsp;
+                <a
+                  href="https://github.com/knwch"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  &nbsp;t.&nbsp;
+                </a>
+              </div>
+            </footer>
+          </>
+        ) : (
+          <Splash />
+        )}
       </MuiThemeProvider>
+
       <div
         className="cursor"
         style={{

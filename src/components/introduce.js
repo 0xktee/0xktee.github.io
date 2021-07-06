@@ -136,6 +136,10 @@ const Introduce = () => {
 
               <div id="nick-name">tee.</div>
 
+              <Typography className="info-typo" variant="span">
+                /korrawich khosripetch/
+              </Typography>
+
               <Typography className="describe-typo" variant="span">
                 I'm a <span id="role">developer</span> who loves making
                 interesting things. I'm based in Bangkok, Thailand, Planet

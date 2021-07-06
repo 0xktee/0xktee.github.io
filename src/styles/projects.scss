@@ -1,5 +1,6 @@
 $xs: 0px;
 $sm: 600px;
+$mint: #2cf1aa;
 
 svg.triangle {
   position: absolute;
@@ -41,7 +42,7 @@ svg.triangle {
   cursor: pointer;
 
   &:hover {
-    color: #2cf1aa;
+    color: $mint;
     background-color: #212121;
     -webkit-transition: background-color 100ms linear;
     -ms-transition: background-color 100ms linear;
@@ -162,7 +163,7 @@ svg.triangle {
   border-radius: 36px;
 
   &:hover {
-    color: #2cf1aa;
+    color: $mint;
     background-color: #212121;
   }
 }
@@ -181,7 +182,7 @@ svg.triangle {
   border-radius: 36px;
 
   &:hover {
-    color: #2cf1aa;
+    color: $mint;
     background-color: #212121;
   }
 }
@@ -190,6 +191,6 @@ svg.triangle {
   color: #212121;
 
   &:hover {
-    background-color: #2cf1aa;
+    background-color: $mint;
   }
 }

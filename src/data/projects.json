@@ -1,35 +1,35 @@
 [
   {
     "title": "Facial Expression Recognition",
-    "describe": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested",
+    "describe": "Facial Expression Recognition System for Food Product Testing using Deep Learning to measure and assess the emotions of the face while eating. MobileNetV2 was chosen for detecting eating behavior, with an accuracy of 95.7%. And VGG16 was chosen for recognizing facial expression, with an accuracy of 92.9%.",
     "stack": ["Tensorflow", "Opencv", "Plotly"],
     "git": "",
     "demo": ""
   },
   {
     "title": "Skill Guider",
-    "describe": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "describe": "A web application for guiding career skills development, by giving lists of skills which user should improve.",
     "stack": ["Nestjs", "Angular", "Mongodb"],
     "git": "https://github.com/knwch/skillguider",
     "demo": "https://skill-guider.herokuapp.com"
   },
   {
     "title": "Search Content",
-    "describe": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+    "describe": "A web application for fetching Google Custom Search API and cleaning results for online courses and articles.",
     "stack": ["Flask", "Angular", "Firebase"],
     "git": "https://github.com/knwch/search-content",
     "demo": ""
   },
   {
     "title": "PAKU",
-    "describe": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    "describe": "A web application for finding and renting car parks, combined with Google Maps API.",
     "stack": ["NodeDotJs", "Semanticuireact", "Redux", "Googlemaps"],
     "git": "https://github.com/knwch/PAKU",
     "demo": "https://paku-cef3a.web.app"
   },
   {
     "title": "Goods Application",
-    "describe": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
+    "describe": "A mobile application for set goods for sale and allow users to discover. Also, users mostly need to interact with Mapbox API.",
     "stack": ["NodeDotJs", "ReactJs", "Redux", "Mapbox"],
     "git": "https://github.com/knwch/Goods-App",
     "demo": ""

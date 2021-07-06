@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { motion, useCycle } from 'framer-motion';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import '../styles/menubar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -72,8 +72,17 @@ const livariants = {
   },
 };
 
-const MenuBar = () => {
+const MenuBar = ({ location }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+
+  const goToProjectSection = () => {
+    const pathname = window.location.pathname;
+    if (pathname === '/') {
+      scrollTo('#projects');
+    } else {
+      navigate('/');
+    }
+  };
 
   const renderDesktopMenu = (
     <div className="desktop-section">
@@ -90,7 +99,7 @@ const MenuBar = () => {
       </Link>
       <Link className="button-desktop">
         <Button
-          onClick={() => scrollTo('#projects')}
+          onClick={() => goToProjectSection()}
           className="text-button"
           component={motion.button}
           whileHover={{ scale: 1.1 }}
@@ -141,7 +150,7 @@ const MenuBar = () => {
             <ListItem
               onClick={() => {
                 toggleOpen();
-                scrollTo('#projects');
+                goToProjectSection();
               }}
               component={motion.li}
               variants={livariants}
@@ -180,6 +189,7 @@ const MenuBar = () => {
           className="tab-icon"
           onClick={() => toggleOpen()}
           disableRipple={true}
+          id="menutab"
         >
           <svg width="23" height="23" viewBox="0 0 23 23">
             <motion.path

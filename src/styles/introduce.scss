@@ -1,5 +1,13 @@
 $stroke: #000;
 $mint: #2cf1aa;
+$yellow: #ffea39;
+
+.hello-typo {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+}
 
 #nick-name {
   position: relative;
@@ -8,8 +16,8 @@ $mint: #2cf1aa;
   font-weight: bold;
   font-size: 6rem;
 
-  margin-top: 28px;
-  margin-bottom: 28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 
   letter-spacing: 6px;
 
@@ -19,18 +27,12 @@ $mint: #2cf1aa;
     6px 6px $mint;
 }
 
-.hello-typo {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: white;
-  display: block;
-}
-
 .info-typo {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: $mint;
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
   display: block;
+  padding-bottom: 8px;
 }
 
 .describe-typo {

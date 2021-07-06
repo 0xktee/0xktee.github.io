@@ -1,3 +1,5 @@
+$mint: #2cf1aa;
+
 .header-contact {
   font-weight: 500;
   font-size: 2rem;
@@ -25,7 +27,7 @@
     border-color: #000;
 
     .MuiCardContent-root.social-container {
-      background-color: #2cf1aa;
+      background-color: $mint;
 
       .icon-social {
         // color: #2cf1aa;
@@ -89,12 +91,12 @@
       }
 
       &.phone:hover {
-        color: #2cf1aa;
+        color: $mint;
         text-decoration: none;
       }
 
       &.email:hover {
-        color: #2cf1aa;
+        color: $mint;
         cursor: pointer;
       }
     }
