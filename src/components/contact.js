@@ -98,7 +98,7 @@ const Contact = () => {
             {IconSocial('Github', 'Github', 'https://github.com/knwch')}
             {IconSocial('Medium', 'Medium', 'https://medium.com/@knwch')}
             {IconSocial('Twitter', 'Twitter', 'https://twitter.com/0xcronto_')}
-            {IconSocial('eet#0256', 'Discord', '')}
+            {IconSocial('teeshirt#1251', 'Discord', '')}
             {IconSocial('Stay motivated.', 'Buymeacoffee', '')}
 
             <Grid xs={12} item>
