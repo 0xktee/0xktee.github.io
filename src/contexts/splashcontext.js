@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-export const SplashContext = createContext(null);
+export const SplashContext = createContext();
 
 const SplashProvider = ({ children }) => {
   const [isSplashFinish, setSplashFinish] = useState(false);
