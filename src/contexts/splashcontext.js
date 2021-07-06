@@ -2,12 +2,12 @@ import React, { createContext, useState } from 'react';
 
 export const SplashContext = createContext();
 
-const SplashProvider = ({ children }) => {
+const SplashProvider = (props) => {
   const [isSplashFinish, setSplashFinish] = useState(false);
 
   return (
     <SplashContext.Provider value={{ isSplashFinish, setSplashFinish }}>
-      {children}
+      {props.children}
     </SplashContext.Provider>
   );
 };
