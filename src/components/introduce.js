@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react';
-import { Typography, Box, Grid, Button, makeStyles } from '@material-ui/core';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
-import scrollTo from 'gatsby-plugin-smoothscroll';
-import dayjs from 'dayjs';
-import lottie from 'lottie-web';
-import medi from '../assets/lottiefiles/57088-no-ads.json';
+import React, { useRef, useEffect } from 'react'
+import { Typography, Box, Grid, Button, makeStyles } from '@material-ui/core'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
+import scrollTo from 'gatsby-plugin-smoothscroll'
+import dayjs from 'dayjs'
+import lottie from 'lottie-web'
+import medi from '../assets/lottiefiles/57088-no-ads.json'
 
-import '../styles/introduce.scss';
+import '../styles/introduce.scss'
 
 const useStyles = makeStyles((theme) => ({
   lottieContainer: {
@@ -14,15 +14,15 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-}));
+}))
 
 const Introduce = () => {
-  const classes = useStyles();
-  const animationContainer = useRef();
-  const constraintsRef = useRef();
+  const classes = useStyles()
+  const animationContainer = useRef()
+  const constraintsRef = useRef()
 
   useEffect(() => {
-    lottie.setQuality('low');
+    lottie.setQuality('low')
     lottie
       .loadAnimation({
         container: animationContainer.current,
@@ -35,35 +35,35 @@ const Introduce = () => {
           progressiveLoad: true,
         },
       })
-      .setSpeed(0.85);
+      .setSpeed(0.85)
 
     return () => {
-      lottie.destroy();
-    }; // optional clean up for unmounting
-  }, []);
+      lottie.destroy()
+    } // optional clean up for unmounting
+  }, [])
 
   const getGreetingTime = (dayjs) => {
-    let greetingWord = null; // return greetingWord
+    let greetingWord = null // return greetingWord
 
     if (!dayjs || !dayjs.isValid()) {
-      return;
+      return
     } // if we can't find a valid or filled moment, we return.
 
-    const splitAfternoon = 12; // 24hr time to split the afternoon
-    const splitEvening = 17; // 24hr time to split the evening
-    const splitLateEvening = 3;
-    const currentHour = parseFloat(dayjs.format('HH'));
+    const splitAfternoon = 12 // 24hr time to split the afternoon
+    const splitEvening = 17 // 24hr time to split the evening
+    const splitLateEvening = 3
+    const currentHour = parseFloat(dayjs.format('HH'))
 
     if (currentHour >= splitAfternoon && currentHour <= splitEvening) {
-      greetingWord = 'afternoon';
+      greetingWord = 'afternoon'
     } else if (currentHour >= splitEvening || currentHour <= splitLateEvening) {
-      greetingWord = 'evening';
+      greetingWord = 'evening'
     } else {
-      greetingWord = 'morning';
+      greetingWord = 'morning'
     }
 
-    return greetingWord;
-  };
+    return greetingWord
+  }
 
   return (
     <LazyMotion features={domAnimation}>
@@ -161,7 +161,7 @@ const Introduce = () => {
         </Grid>
       </Box>
     </LazyMotion>
-  );
-};
+  )
+}
 
-export default Introduce;
+export default Introduce

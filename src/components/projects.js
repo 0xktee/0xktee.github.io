@@ -1,12 +1,12 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState } from 'react'
 import {
   m,
   AnimateSharedLayout,
   AnimatePresence,
   LazyMotion,
   domAnimation,
-} from 'framer-motion';
-import { Link } from 'gatsby';
+} from 'framer-motion'
+import { Link } from 'gatsby'
 
 import {
   Box,
@@ -16,7 +16,7 @@ import {
   Grid,
   CardActions,
   Button,
-} from '@material-ui/core';
+} from '@material-ui/core'
 import {
   Tensorflow,
   Opencv,
@@ -33,13 +33,13 @@ import {
   ReactJs,
   Redux,
   Github,
-} from '@icons-pack/react-simple-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+} from '@icons-pack/react-simple-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
-import projectsData from '../data/projects.json';
+import projectsData from '../data/projects.json'
 
-import '../styles/projects.scss';
+import '../styles/projects.scss'
 
 const componentMapping = {
   Tensorflow,
@@ -57,7 +57,7 @@ const componentMapping = {
   ReactJs,
   Redux,
   Github,
-};
+}
 
 const textMapping = {
   Tensorflow: 'Tensorflow',
@@ -75,10 +75,10 @@ const textMapping = {
   ReactJs: 'React Native',
   Redux: 'Redux',
   Github: 'Github',
-};
+}
 
 const Projects = () => {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(null)
 
   const CardProject = (data, index) => {
     return (
@@ -107,8 +107,8 @@ const Projects = () => {
               layoutId={`card-stack-container-${index}`}
             >
               {data?.stack.map((item, index) => {
-                const Component = componentMapping[item];
-                return <Component className="icon-stack non-text" size={18} />;
+                const Component = componentMapping[item]
+                return <Component className="icon-stack non-text" size={18} />
               })}
             </m.div>
           </CardContent>
@@ -123,8 +123,8 @@ const Projects = () => {
           </div>
         </Card>
       </m.div>
-    );
-  };
+    )
+  }
 
   return (
     <LazyMotion features={domAnimation}>
@@ -215,8 +215,8 @@ const Projects = () => {
                         >
                           {projectsData[selectedId - 1]?.stack.map(
                             (item, index) => {
-                              const Component = componentMapping[item];
-                              const Text = textMapping[item];
+                              const Component = componentMapping[item]
+                              const Text = textMapping[item]
                               return (
                                 <Fragment>
                                   <div className="icon-project-group">
@@ -230,7 +230,7 @@ const Projects = () => {
                                   </div>
                                   <br />
                                 </Fragment>
-                              );
+                              )
                             }
                           )}
                         </m.div>
@@ -267,7 +267,7 @@ const Projects = () => {
         </Grid>
       </Box>
     </LazyMotion>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

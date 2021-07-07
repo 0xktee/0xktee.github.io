@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { SplashContext } from '../contexts/splashcontext';
+import React, { useState, useEffect, useContext } from 'react'
+import { SplashContext } from '../contexts/splashcontext'
 
-import { Box, Grid } from '@material-ui/core';
-import anime from 'animejs/lib/anime.es.js';
+import { Box, Grid } from '@material-ui/core'
+import anime from 'animejs/lib/anime.es.js'
 
 const Splash = () => {
-  const strokeColor = '#2cf1aa';
-  const strokeWidth = '5';
-  const [visibility, setVisibility] = useState('hidden');
-  const { setSplashFinish } = useContext(SplashContext);
+  const strokeColor = '#2cf1aa'
+  const strokeWidth = '5'
+  const [visibility, setVisibility] = useState('hidden')
+  const { setSplashFinish } = useContext(SplashContext)
 
   useEffect(() => {
     anime({
@@ -17,25 +17,25 @@ const Splash = () => {
       easing: 'easeInOutSine',
       duration: 1200,
       delay: function (el, i) {
-        return i * 250;
+        return i * 250
       },
       direction: 'alternate',
       loop: false,
-    });
+    })
 
-    setVisibility('visible');
+    setVisibility('visible')
 
     const timer = setTimeout(() => {
-      setSplashFinish(true);
-    }, 2500);
+      setSplashFinish(true)
+    }, 2500)
 
     return () => {
-      anime.remove('#splash path');
-      clearTimeout(timer);
-    };
+      anime.remove('#splash path')
+      clearTimeout(timer)
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [])
 
   return (
     <Box display="flex" className="box box-default dark-background">
@@ -98,7 +98,7 @@ const Splash = () => {
         </svg>
       </Grid>
     </Box>
-  );
-};
+  )
+}
 
-export default Splash;
+export default Splash

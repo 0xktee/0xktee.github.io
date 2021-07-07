@@ -1,18 +1,18 @@
-import React, { useRef, useEffect } from 'react';
-import { Box, Grid, Button } from '@material-ui/core';
-import { Link } from 'gatsby';
-import lottie from 'lottie-web';
-import Layout from '../components/layout';
+import React, { useRef, useEffect } from 'react'
+import { Box, Grid, Button } from '@material-ui/core'
+import { Link } from 'gatsby'
+import lottie from 'lottie-web'
+import Layout from '../components/layout'
 
-import lonely from '../assets/lottiefiles/36395-lonely-404.json';
+import lonely from '../assets/lottiefiles/36395-lonely-404.json'
 
-import '../styles/404.scss';
+import '../styles/404.scss'
 
 const NotFoundPage = () => {
-  const animation404Container = useRef();
+  const animation404Container = useRef()
 
   useEffect(() => {
-    lottie.setQuality('low');
+    lottie.setQuality('low')
     lottie.loadAnimation({
       container: animation404Container.current,
       renderer: 'svg',
@@ -22,12 +22,12 @@ const NotFoundPage = () => {
       rendererSettings: {
         progressiveLoad: true,
       },
-    });
+    })
 
     return () => {
-      lottie.destroy();
-    }; // optional clean up for unmounting
-  }, []);
+      lottie.destroy()
+    } // optional clean up for unmounting
+  }, [])
 
   return (
     <Layout>
@@ -53,7 +53,7 @@ const NotFoundPage = () => {
         </Grid>
       </Box>
     </Layout>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

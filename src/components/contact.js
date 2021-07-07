@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'gatsby';
-import { LazyMotion, domAnimation } from 'framer-motion';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'gatsby'
+import { LazyMotion, domAnimation } from 'framer-motion'
 import {
   Box,
   Typography,
@@ -8,7 +8,7 @@ import {
   CardContent,
   Grid,
   Tooltip,
-} from '@material-ui/core';
+} from '@material-ui/core'
 import {
   Twitter,
   Linkedin,
@@ -16,9 +16,9 @@ import {
   Medium,
   Discord,
   Buymeacoffee,
-} from '@icons-pack/react-simple-icons';
+} from '@icons-pack/react-simple-icons'
 
-import '../styles/contact.scss';
+import '../styles/contact.scss'
 
 const componentMapping = {
   Twitter,
@@ -27,30 +27,30 @@ const componentMapping = {
   Medium,
   Discord,
   Buymeacoffee,
-};
+}
 
 const Contact = () => {
-  const [isCopy, setIsCopy] = useState(false);
+  const [isCopy, setIsCopy] = useState(false)
 
   const copyTextToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    setIsCopy(true);
-  };
+    navigator.clipboard.writeText(text)
+    setIsCopy(true)
+  }
 
   useEffect(() => {
     setTimeout(() => {
-      setIsCopy(false);
-    }, 3000);
-  }, [isCopy]);
+      setIsCopy(false)
+    }, 3000)
+  }, [isCopy])
 
   const IconSocial = (text, icon, href) => {
-    const Component = componentMapping[icon];
+    const Component = componentMapping[icon]
 
-    let linkProps = {};
+    let linkProps = {}
 
     if (href !== '') {
-      linkProps.href = href;
-      linkProps.target = '_blank';
+      linkProps.href = href
+      linkProps.target = '_blank'
     }
 
     return (
@@ -67,8 +67,8 @@ const Contact = () => {
           </Card>
         </Link>
       </Grid>
-    );
-  };
+    )
+  }
 
   return (
     <LazyMotion features={domAnimation}>
@@ -135,7 +135,7 @@ const Contact = () => {
         </Grid>
       </Box>
     </LazyMotion>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

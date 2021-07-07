@@ -6,5 +6,5 @@
 
 // You can delete this file if you're not using it
 
-import SplashProvider from './src/contexts/splashcontext';
-export const wrapRootElement = SplashProvider;
+import SplashProvider from './src/contexts/splashcontext'
+export const wrapRootElement = SplashProvider

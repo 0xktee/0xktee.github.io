@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState, useEffect, useContext } from 'react';
-import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
-import '../styles/layout.scss';
+import React, { useState, useEffect, useContext } from 'react'
+import { Helmet } from 'react-helmet'
+import PropTypes from 'prop-types'
+import '../styles/layout.scss'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Menubar from './menubar';
-import Splash from '../components/splash';
-import { SplashContext } from '../contexts/splashcontext';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import Menubar from './menubar'
+import Splash from '../components/splash'
+import { SplashContext } from '../contexts/splashcontext'
 
 const THEME = createMuiTheme({
   palette: {
@@ -26,25 +26,25 @@ const THEME = createMuiTheme({
     fontWeightMedium: 500,
     fontWeightBold: 600,
   },
-});
+})
 
 const Layout = ({ children }) => {
-  const { isSplashFinish } = useContext(SplashContext);
+  const { isSplashFinish } = useContext(SplashContext)
 
-  const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
+  const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 })
 
   useEffect(() => {
     const moveCursor = (e) => {
-      const x = e.clientX - 16;
-      const y = e.clientY - 16;
-      setCursorXY({ x, y });
-    };
-    window.addEventListener('mousemove', moveCursor);
+      const x = e.clientX - 16
+      const y = e.clientY - 16
+      setCursorXY({ x, y })
+    }
+    window.addEventListener('mousemove', moveCursor)
 
     return () => {
-      window.removeEventListener('mousemove', moveCursor);
-    };
-  }, []);
+      window.removeEventListener('mousemove', moveCursor)
+    }
+  }, [])
 
   return (
     <>
@@ -92,11 +92,11 @@ const Layout = ({ children }) => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

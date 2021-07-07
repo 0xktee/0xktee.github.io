@@ -2,7 +2,7 @@
   "name": "knwch-portfolio",
   "private": true,
   "description": "A developer portfolio website of Korrawich Khosripetch.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Korrawich Khosripetch <korrawich.kho@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

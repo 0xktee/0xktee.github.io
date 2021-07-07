@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
-import { motion, useCycle } from 'framer-motion';
-import { Link, navigate } from 'gatsby';
-import scrollTo from 'gatsby-plugin-smoothscroll';
-import '../styles/menubar.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Logo from '../assets/logo-plain.svg';
+import React, { Fragment } from 'react'
+import { motion, useCycle } from 'framer-motion'
+import { Link, navigate } from 'gatsby'
+import scrollTo from 'gatsby-plugin-smoothscroll'
+import '../styles/menubar.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBook, faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Logo from '../assets/logo-plain.svg'
 
 import {
   AppBar,
@@ -18,7 +18,7 @@ import {
   List,
   ListItem,
   ListItemText,
-} from '@material-ui/core';
+} from '@material-ui/core'
 
 const sidebar = {
   open: {
@@ -38,7 +38,7 @@ const sidebar = {
       damping: 40,
     },
   },
-};
+}
 
 const ulvariants = {
   open: {
@@ -53,7 +53,7 @@ const ulvariants = {
     },
     display: 'none',
   },
-};
+}
 
 const livariants = {
   open: {
@@ -70,19 +70,19 @@ const livariants = {
       x: { stiffness: 1000 },
     },
   },
-};
+}
 
 const MenuBar = ({ location }) => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, toggleOpen] = useCycle(false, true)
 
   const goToProjectSection = () => {
-    const pathname = window.location.pathname;
+    const pathname = window.location.pathname
     if (pathname === '/') {
-      scrollTo('#projects');
+      scrollTo('#projects')
     } else {
-      navigate('/');
+      navigate('/')
     }
-  };
+  }
 
   const renderDesktopMenu = (
     <div className="desktop-section">
@@ -119,7 +119,7 @@ const MenuBar = ({ location }) => {
         </Button>
       </Link>
     </div>
-  );
+  )
 
   const renderMobileMenu = (
     <div className="mobile-section">
@@ -149,8 +149,8 @@ const MenuBar = ({ location }) => {
           <Link className="button-mobile">
             <ListItem
               onClick={() => {
-                toggleOpen();
-                goToProjectSection();
+                toggleOpen()
+                goToProjectSection()
               }}
               component={motion.li}
               variants={livariants}
@@ -228,7 +228,7 @@ const MenuBar = ({ location }) => {
         </IconButton>
       </motion.nav>
     </div>
-  );
+  )
 
   return (
     <Fragment>
@@ -265,7 +265,7 @@ const MenuBar = ({ location }) => {
       </AppBar>
       {renderMobileMenu}
     </Fragment>
-  );
-};
+  )
+}
 
-export default MenuBar;
+export default MenuBar
