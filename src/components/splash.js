@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { SplashContext } from '../contexts/splashcontext';
 
 import { Box, Grid } from '@material-ui/core';
@@ -7,6 +7,7 @@ import anime from 'animejs/lib/anime.es.js';
 const Splash = () => {
   const strokeColor = '#2cf1aa';
   const strokeWidth = '5';
+  const [visibility, setVisibility] = useState('hidden');
   const { setSplashFinish } = useContext(SplashContext);
 
   useEffect(() => {
@@ -21,6 +22,8 @@ const Splash = () => {
       direction: 'alternate',
       loop: false,
     });
+
+    setVisibility('visible');
 
     const timer = setTimeout(() => {
       setSplashFinish(true);
@@ -38,6 +41,7 @@ const Splash = () => {
     <Box display="flex" className="box box-default dark-background">
       <Grid justify="center" alignItems="center" container>
         <svg
+          visibility={visibility}
           height="72px"
           id="splash"
           xmlns="http://www.w3.org/2000/svg"
