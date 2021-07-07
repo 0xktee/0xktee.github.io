@@ -1,4 +1,4 @@
-$stroke: #000;
+$stroke: #181818;
 $mint: #2cf1aa;
 $yellow: #ffea39;
 
@@ -54,11 +54,14 @@ $yellow: #ffea39;
 .MuiButton-root.reach-button {
   margin-top: 24px;
   border-radius: 36px;
+
   font-weight: 500;
   text-transform: none;
   background-color: $mint;
 
   &:hover {
-    background-color: #38d49b;
+    background-color: #191919;
+    color: $mint;
+    box-shadow: 0 0 0 2px $mint inset;
   }
 }

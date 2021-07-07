@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  &nbsp;t.&nbsp;
+                  &nbsp;k.&nbsp;
                 </a>
               </div>
             </footer>

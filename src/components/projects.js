@@ -34,6 +34,9 @@ import {
   Redux,
   Github,
 } from '@icons-pack/react-simple-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
 import projectsData from '../data/projects.json';
 
 import '../styles/projects.scss';
@@ -79,11 +82,10 @@ const Projects = () => {
 
   const CardProject = (data, index) => {
     return (
-      <m.div whileHover={{ scale: 1.04 }} className="card-container">
+      <m.div whileHover={{ scale: 1.05 }} className="card-container">
         <Card
           layoutId={`card-test-${index}`}
           className="card-project list"
-          variant="outlined"
           component={m.div}
           onClick={() => setSelectedId(index)}
         >
@@ -109,14 +111,16 @@ const Projects = () => {
                 return <Component className="icon-stack non-text" size={18} />;
               })}
             </m.div>
-
-            {/* <m.div
-              className="card-github-container"
-              layoutId={`card-github-container-${index}`}
-            >
-              <Github size={18} />
-            </m.div> */}
           </CardContent>
+
+          <div className="card-float-group">
+            <span className="card-external-container" hidden={data.demo === ''}>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </span>
+            <span className="card-github-container" hidden={data.git === ''}>
+              <Github size={17} />
+            </span>
+          </div>
         </Card>
       </m.div>
     );
@@ -135,7 +139,7 @@ const Projects = () => {
           justify="center"
           container
         >
-          <Grid xs={11} md={9} lg={8} spacing={2} container>
+          <Grid xs={11} md={9} lg={8} spacing={3} container>
             <Grid xs={12} item>
               <Typography className="header-project" variant="span">
                 Feature Projects 📔

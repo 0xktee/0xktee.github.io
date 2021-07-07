@@ -23,6 +23,8 @@ $mint: #2cf1aa;
 }
 
 .MuiCard-root.social-card {
+  border-color: #272727;
+
   &:hover {
     border-color: #000;
 
@@ -30,11 +32,9 @@ $mint: #2cf1aa;
       background-color: $mint;
 
       .icon-social {
-        // color: #2cf1aa;
         color: #212121;
       }
       .text-social {
-        // color: #2cf1aa;
         color: #212121;
       }
     }
@@ -44,20 +44,7 @@ $mint: #2cf1aa;
   .MuiCardContent-root.social-container {
     display: inline-block;
     width: 100%;
-    background-color: #212121;
-
-    // &:hover {
-    //   background-color: #2cf1aa;
-
-    //   .icon-social {
-    //     // color: #2cf1aa;
-    //     color: #212121;
-    //   }
-    //   .text-social {
-    //     // color: #2cf1aa;
-    //     color: #212121;
-    //   }
-    // }
+    background-color: #191919;
 
     .icon-social {
       color: white;

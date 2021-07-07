@@ -195,7 +195,7 @@ const MenuBar = ({ location }) => {
             <motion.path
               fill="transparent"
               strokeWidth="3"
-              stroke="#212121"
+              stroke="#181818"
               strokeLinecap="round"
               variants={{
                 closed: { d: 'M 2 2.5 L 20 2.5' },
@@ -205,7 +205,7 @@ const MenuBar = ({ location }) => {
             <motion.path
               fill="transparent"
               strokeWidth="3"
-              stroke="#212121"
+              stroke="#181818"
               strokeLinecap="round"
               d="M 2 9.423 L 20 9.423"
               variants={{
@@ -217,7 +217,7 @@ const MenuBar = ({ location }) => {
             <motion.path
               fill="transparent"
               strokeWidth="3"
-              stroke="#212121"
+              stroke="#181818"
               strokeLinecap="round"
               variants={{
                 closed: { d: 'M 2 16.346 L 20 16.346' },

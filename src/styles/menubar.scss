@@ -3,7 +3,7 @@ $spacing: 8px;
 $mobile-spacing: $spacing * 3;
 $desktop-spacing: $spacing * 7;
 $border: #2cf1aa;
-$background-dark: #212121;
+$background-dark: #181818;
 
 .MuiAppBar-root {
   &.top-border {
@@ -72,7 +72,7 @@ $background-dark: #212121;
 
   .button-mobile {
     text-decoration: none;
-    color: #212121;
+    color: #181818;
   }
 
   .text-button {
@@ -90,7 +90,7 @@ $background-dark: #212121;
 
   .awesome-icon {
     margin-left: 1rem;
-    color: #212121;
+    color: #181818;
   }
 }
 

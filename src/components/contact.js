@@ -85,8 +85,8 @@ const Contact = () => {
                 Get In Touch ☕
               </Typography>
               <Typography className="describe-contact" variant="span">
-                If you have something to discuss, please feel free to contact
-                me.
+                If you have something to discuss, please feel free to contact me
+                anytime.
               </Typography>
             </Grid>
 

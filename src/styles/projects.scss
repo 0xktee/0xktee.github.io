@@ -1,6 +1,7 @@
 $xs: 0px;
 $sm: 600px;
 $mint: #2cf1aa;
+$font: #212121;
 
 svg.triangle {
   position: absolute;
@@ -19,7 +20,7 @@ svg.triangle {
 .header-project {
   font-weight: 500;
   font-size: 2rem;
-  color: #212121;
+  color: $font;
   display: block;
   padding-bottom: 8px;
 }
@@ -27,23 +28,25 @@ svg.triangle {
 .describe-project {
   font-weight: 400;
   font-size: 1rem;
-  color: #212121;
+  color: $font;
   display: block;
   padding-bottom: 8px;
 }
 
 .MuiCard-root.card-project {
-  color: #212121;
+  color: $font;
   background-color: white;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: rgba(0, 0, 0, 0.2);
+  // border-style: solid;
+  // border-width: 2px;
+  // border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  position: relative;
   cursor: pointer;
 
   &:hover {
     color: $mint;
-    background-color: #212121;
+    background-color: $font;
     -webkit-transition: background-color 100ms linear;
     -ms-transition: background-color 100ms linear;
     transition: background-color 100ms linear;
@@ -67,7 +70,7 @@ svg.triangle {
 
   &.single {
     align-items: flex-start;
-    color: #212121;
+    color: $font;
     background-color: white;
     cursor: auto;
 
@@ -89,9 +92,20 @@ svg.triangle {
     max-width: 300px;
   }
 
-  // div.card-github-container {
-  //   max-width: 300px;
-  // }
+  div.card-float-group {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    span.card-external-container {
+      vertical-align: baseline;
+    }
+
+    span.card-github-container {
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
 
   .card-project-header {
     font-weight: 600;
@@ -158,13 +172,13 @@ svg.triangle {
   margin-bottom: 8px;
 
   text-transform: none;
-  color: #212121;
+  color: $font;
   border-color: rgba(0, 0, 0, 0.23);
   border-radius: 36px;
 
   &:hover {
     color: $mint;
-    background-color: #212121;
+    background-color: $font;
   }
 }
 
@@ -177,18 +191,18 @@ svg.triangle {
   }
 
   text-transform: none;
-  color: #212121;
+  color: $font;
   border-color: rgba(0, 0, 0, 0.23);
   border-radius: 36px;
 
   &:hover {
     color: $mint;
-    background-color: #212121;
+    background-color: $font;
   }
 }
 
 #githubl1 {
-  color: #212121;
+  color: $font;
 
   &:hover {
     background-color: $mint;
