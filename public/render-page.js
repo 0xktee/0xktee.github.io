@@ -40357,8 +40357,14 @@ function useScrollRestoration(identifier) {
 /*!**********************************!*\
   !*** ./.cache/api-runner-ssr.js ***!
   \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "apiRunner": () => (/* binding */ apiRunner),
+/* harmony export */   "apiRunnerAsync": () => (/* binding */ apiRunnerAsync)
+/* harmony export */ });
 var plugins = [{
   name: 'gatsby-plugin-react-helmet',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
@@ -40400,7 +40406,9 @@ var plugins = [{
   options: {
     "plugins": []
   }
-}]; // During bootstrap, we write requires at top of this file which looks like:
+}];
+/* global plugins */
+// During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -40412,51 +40420,88 @@ var plugins = [{
 //   },
 // ]
 
-const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js"); // Run the specified API in any plugins that have implemented it
+const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
 
+function augmentErrorWithPlugin(plugin, err) {
+  if (plugin.name !== `default-site-plugin`) {
+    // default-site-plugin is user code and will print proper stack trace,
+    // so no point in annotating error message pointing out which plugin is root of the problem
+    err.message += ` (from plugin: ${plugin.name})`;
+  }
 
-module.exports = (api, args, defaultReturn, argTransform) => {
+  throw err;
+}
+
+function apiRunner(api, args, defaultReturn, argTransform) {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api);
-  } // Run each plugin in series.
-  // eslint-disable-next-line no-undef
+  }
 
+  const results = [];
+  plugins.forEach(plugin => {
+    const apiFn = plugin.plugin[api];
 
-  let results = plugins.map(plugin => {
-    if (!plugin.plugin[api]) {
-      return undefined;
+    if (!apiFn) {
+      return;
     }
 
     try {
-      const result = plugin.plugin[api](args, plugin.options);
+      const result = apiFn(args, plugin.options);
 
       if (result && argTransform) {
         args = argTransform({
           args,
           result
         });
-      }
+      } // This if case keeps behaviour as before, we should allow undefined here as the api is defined
+      // TODO V4
 
-      return result;
+
+      if (typeof result !== `undefined`) {
+        results.push(result);
+      }
     } catch (e) {
-      if (plugin.name !== `default-site-plugin`) {
-        // default-site-plugin is user code and will print proper stack trace,
-        // so no point in annotating error message pointing out which plugin is root of the problem
-        e.message += ` (from plugin: ${plugin.name})`;
-      }
-
-      throw e;
+      augmentErrorWithPlugin(plugin, e);
     }
-  }); // Filter out undefined results.
-
-  results = results.filter(result => typeof result !== `undefined`);
-
-  if (results.length > 0) {
-    return results;
-  } else {
-    return [defaultReturn];
+  });
+  return results.length ? results : [defaultReturn];
+}
+async function apiRunnerAsync(api, args, defaultReturn, argTransform) {
+  if (!apis[api]) {
+    console.log(`This API doesn't exist`, api);
   }
-};
+
+  const results = [];
+
+  for (const plugin of plugins) {
+    const apiFn = plugin.plugin[api];
+
+    if (!apiFn) {
+      continue;
+    }
+
+    try {
+      const result = await apiFn(args, plugin.options);
+
+      if (result && argTransform) {
+        args = argTransform({
+          args,
+          result
+        });
+      } // This if case keeps behaviour as before, we should allow undefined here as the api is defined
+      // TODO V4
+
+
+      if (typeof result !== `undefined`) {
+        results.push(result);
+      }
+    } catch (e) {
+      augmentErrorWithPlugin(plugin, e);
+    }
+  }
+
+  return results.length ? results : [defaultReturn];
+}
 
 /***/ }),
 
@@ -63780,7 +63825,7 @@ function warning(condition, message) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"knwch-portfolio","private":true,"description":"A developer portfolio website of Korrawich Khosripetch.","version":"0.1.0","author":"Korrawich Khosripetch <korrawich.kho@gmail.com>","dependencies":{"@fortawesome/fontawesome-svg-core":"^1.2.35","@fortawesome/free-brands-svg-icons":"^5.15.3","@fortawesome/free-solid-svg-icons":"^5.15.3","@fortawesome/react-fontawesome":"^0.1.14","@icons-pack/react-simple-icons":"^4.4.0","@material-ui/core":"^4.11.4","animejs":"^3.2.1","dayjs":"^1.10.5","framer-motion":"^4.1.17","gatsby":"^3.8.1","gatsby-plugin-gatsby-cloud":"^2.8.1","gatsby-plugin-image":"^1.8.0","gatsby-plugin-manifest":"^3.8.0","gatsby-plugin-material-ui":"^3.0.1","gatsby-plugin-offline":"^4.8.0","gatsby-plugin-react-helmet":"^4.8.0","gatsby-plugin-sass":"^4.8.0","gatsby-plugin-sharp":"^3.8.0","gatsby-plugin-smoothscroll":"^1.2.0","gatsby-source-filesystem":"^3.8.0","gatsby-transformer-sharp":"^3.8.0","lottie-web":"^5.7.11","prop-types":"^15.7.2","react":"^17.0.2","react-dom":"^17.0.2","react-helmet":"^6.1.0","sass":"^1.35.1"},"devDependencies":{"gh-pages":"^3.2.3","prettier":"^2.3.2"},"keywords":["gatsby"],"license":"0BSD","scripts":{"build":"gatsby build","develop":"gatsby develop","format":"prettier --write \\"**/*.{js,jsx,ts,tsx,json,md}\\"","start":"npm run develop","serve":"gatsby serve","clean":"gatsby clean","test":"echo \\"Write tests! -> https://gatsby.dev/unit-testing\\" && exit 1","deploy":"gatsby build --prefix-paths && gh-pages -d public -b main"},"repository":{"type":"git","url":"https://github.com/knwch/knwch.github.io"},"bugs":{"url":"https://github.com/knwch/knwch.github.io/issues"}}');
+module.exports = JSON.parse('{"name":"knwch-portfolio","private":true,"description":"A developer portfolio website of Korrawich Khosripetch.","version":"0.1.0","author":"Korrawich Khosripetch <korrawich.kho@gmail.com>","dependencies":{"@fortawesome/fontawesome-svg-core":"^1.2.35","@fortawesome/free-brands-svg-icons":"^5.15.3","@fortawesome/free-solid-svg-icons":"^5.15.3","@fortawesome/react-fontawesome":"^0.1.14","@icons-pack/react-simple-icons":"^4.4.0","@material-ui/core":"^4.12.1","animejs":"^3.2.1","dayjs":"^1.10.6","framer-motion":"^4.1.17","gatsby":"^3.9.0","gatsby-plugin-gatsby-cloud":"^2.9.0","gatsby-plugin-image":"^1.9.0","gatsby-plugin-manifest":"^3.9.0","gatsby-plugin-material-ui":"^3.0.1","gatsby-plugin-offline":"^4.9.0","gatsby-plugin-react-helmet":"^4.9.0","gatsby-plugin-sass":"^4.9.0","gatsby-plugin-sharp":"^3.9.0","gatsby-plugin-smoothscroll":"^1.2.0","gatsby-source-filesystem":"^3.9.0","gatsby-transformer-sharp":"^3.9.0","lottie-web":"^5.7.11","prop-types":"^15.7.2","react":"^17.0.2","react-dom":"^17.0.2","react-helmet":"^6.1.0","sass":"^1.35.1"},"devDependencies":{"gh-pages":"^3.2.3","prettier":"^2.3.2"},"keywords":["gatsby"],"license":"0BSD","scripts":{"build":"gatsby build","develop":"gatsby develop","format":"prettier --write \\"**/*.{js,jsx,ts,tsx,json,md}\\"","start":"npm run develop","serve":"gatsby serve","clean":"gatsby clean","test":"echo \\"Write tests! -> https://gatsby.dev/unit-testing\\" && exit 1","deploy":"gatsby build --prefix-paths && gh-pages -d public -b main"},"repository":{"type":"git","url":"https://github.com/knwch/knwch.github.io"},"bugs":{"url":"https://github.com/knwch/knwch.github.io/issues"}}');
 
 /***/ }),
 
@@ -63970,8 +64015,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/server */ "react-dom/server");
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-runner-ssr */ "./.cache/api-runner-ssr.js");
-/* harmony import */ var _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__);
 
+
+/* global BROWSER_ESM_ONLY */
 
 
  // import testRequireError from "./test-require-error"
@@ -64056,7 +64102,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     postBodyComponents = components;
   };
 
-  _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onRenderBody`, {
+  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onRenderBody`, {
     setHeadComponents,
     setHtmlAttributes,
     setBodyAttributes,
@@ -64065,7 +64111,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     setBodyProps,
     pathname: pagePath
   });
-  _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onPreRenderHTML`, {
+  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onPreRenderHTML`, {
     getHeadComponents,
     replaceHeadComponents,
     getPreBodyComponents,
@@ -64087,7 +64133,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     htmlAttributes,
     bodyAttributes,
     preBodyComponents,
-    postBodyComponents: postBodyComponents.concat([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
+    postBodyComponents: postBodyComponents.concat([ true && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
       key: `polyfill`,
       src: "/polyfill.js",
       noModule: true
@@ -64097,7 +64143,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
       key: `commons`,
       src: "/commons.js"
-    })])
+    })].filter(Boolean))
   });
   htmlStr = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToStaticMarkup)(htmlElement);
   htmlStr = `<!DOCTYPE html>${htmlStr}`;
