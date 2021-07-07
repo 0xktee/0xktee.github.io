@@ -1,6 +1,4 @@
 {
   "main.js": "render-page.js",
-  "render-page.js.map": "render-page.js.map",
-  "static/profile.jpg": "static/profile-018f7593055501f18271aaa0aa15469e.jpg",
-  "static/viper-glasses.png": "static/viper-glasses-e368414157dd1891336b2b1f2ae3f3a3.png"
+  "render-page.js.map": "render-page.js.map"
 }
