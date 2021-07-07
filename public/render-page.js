@@ -40392,7 +40392,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "2fb980397db3bad729a1931c65608002"
+    "cacheDigest": "5202cb7eca77917ae47bad09d4bf62bc"
   }
 }, {
   name: 'default-site-plugin',
