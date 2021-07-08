@@ -91,6 +91,7 @@ const Introduce = () => {
               transition={{
                 opacity: { ease: 'circIn', duration: 1 },
               }}
+              whileTap={{ scale: 0.95 }}
               drag
               dragConstraints={constraintsRef}
               dragElastic={0.75}
@@ -109,7 +110,7 @@ const Introduce = () => {
                 <text
                   x="-5%"
                   y="20%"
-                  fill="white"
+                  fill="#f4f4f4"
                   transform="translate(0, 0) rotate(-30)"
                   style={{
                     fontWeight: 500,
