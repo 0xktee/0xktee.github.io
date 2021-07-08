@@ -15,9 +15,9 @@ const Splash = () => {
       targets: '#splash path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      duration: 1200,
+      duration: 1000,
       delay: function (el, i) {
-        return i * 250
+        return i * 200
       },
       direction: 'alternate',
       loop: false,
@@ -27,7 +27,7 @@ const Splash = () => {
 
     const timer = setTimeout(() => {
       setSplashFinish(true)
-    }, 2500)
+    }, 2000)
 
     return () => {
       anime.remove('#splash path')
