@@ -1312,10 +1312,10 @@
   "resolved" "https://registry.npmjs.org/@iarna/toml/-/toml-2.2.5.tgz"
   "version" "2.2.5"
 
-"@icons-pack/react-simple-icons@^4.4.0":
-  "integrity" "sha512-LzGL9aeO/KgDkkvgt96fdel1z2KrUW0gC7F9frl9Pd9ocwi42d14nIWlN9buEAZHQplDmfyMBpixcje7xhs8bA=="
-  "resolved" "https://registry.npmjs.org/@icons-pack/react-simple-icons/-/react-simple-icons-4.4.0.tgz"
-  "version" "4.4.0"
+"@icons-pack/react-simple-icons@^4.6.1":
+  "integrity" "sha512-ICONbofFzeTkXvmbnptDv4P9cqtW/N/8EFOqyzJQJ80b8fJoLzqhM7EKslBmWziIwjY9FBnOoL2ofzQOoDG1Gg=="
+  "resolved" "https://registry.npmjs.org/@icons-pack/react-simple-icons/-/react-simple-icons-4.6.1.tgz"
+  "version" "4.6.1"
   dependencies:
     "prop-types" "^15.7.2"
 
@@ -1619,10 +1619,10 @@
     "@babel/runtime" "^7.7.2"
     "regenerator-runtime" "^0.13.3"
 
-"@material-ui/core@^4.12.1":
-  "integrity" "sha512-C6hYsjkWCTfBx9FaqxhCZCITBagh7fyCKFtHyvO3tTOcBw6NJaktdhNZ2n82jQdQdgfFvg6OOxi7OOzsAdAcBQ=="
-  "resolved" "https://registry.npmjs.org/@material-ui/core/-/core-4.12.1.tgz"
-  "version" "4.12.1"
+"@material-ui/core@^4.12.2":
+  "integrity" "sha512-Q1npB8V73IC+eV2X6as+g71MpEGQwqKHUI2iujY62npk35V8nMx/bUXAHjv5kKG1BZ8s8XUWoG6s/VkjYPjjQA=="
+  "resolved" "https://registry.npmjs.org/@material-ui/core/-/core-4.12.2.tgz"
+  "version" "4.12.2"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@material-ui/styles" "^4.11.4"
@@ -6162,10 +6162,10 @@
     "lodash" "^4.17.21"
     "micromatch" "^4.0.2"
 
-"gatsby-plugin-gatsby-cloud@^2.9.0":
-  "integrity" "sha512-C8E8TOlSPY8ULivmdLLdOoNdX5TTV3+WJFzK0+jeQeT11KKfnR24rI9oqdSjeLQxbMJsOjKtng176EqD8vEqVQ=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.9.0.tgz"
-  "version" "2.9.0"
+"gatsby-plugin-gatsby-cloud@^2.9.1":
+  "integrity" "sha512-cs3bb5a+7hZYw5Mx0t40tC672IKKwn6/yRJfazRfgJ4IBE/bEpAfj8x4yzC9vKqdLjCkz1TbTwLOhVEqfBxyzA=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.9.1.tgz"
+  "version" "2.9.1"
   dependencies:
     "@babel/runtime" "^7.14.0"
     "date-fns" "^2.22.1"
@@ -6443,10 +6443,10 @@
   dependencies:
     "@babel/core" "^7.14.0"
 
-"gatsby@^3.0.0", "gatsby@^3.0.0-next.0", "gatsby@^3.9.0":
-  "integrity" "sha512-cBM5Ak4uWMg/eI4du776NIqymGdiQH6qYPvDYdxTItjDrJxZz13Fs3k8fRBgKyGq9xh3+48FLjdSikK2ZUaQXA=="
-  "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-3.9.0.tgz"
-  "version" "3.9.0"
+"gatsby@^3.0.0", "gatsby@^3.0.0-next.0", "gatsby@^3.9.1":
+  "integrity" "sha512-lc0bP7jJwDD5z69WS4PwddPfEKR70UQTFMjEV+BBNAmrm0ZptA1sVmBVaIfclFIUXk5UmBvf7V5m9cS0/jNa0Q=="
+  "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-3.9.1.tgz"
+  "version" "3.9.1"
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.14.0"
@@ -8706,10 +8706,10 @@
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
-"lottie-web@^5.7.11":
-  "integrity" "sha512-Jvz3PQqwrDj1rXGqfeQtipH/WNtM/Y4l8t8NIQXe1xUI0nVooH2bTYJGef0UkdBcWUx1s3miKsRhyP196g9tvQ=="
-  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.7.11.tgz"
-  "version" "5.7.11"
+"lottie-web@^5.7.12":
+  "integrity" "sha512-aW1gdxDzcwXmlYnYJ4SdtH0ujmHzNnAXf+noyE0otUTCLtwMIkOL/CCXmjNj+pZmEeu9GrrHDOt/pTPWOCzBRQ=="
+  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.7.12.tgz"
+  "version" "5.7.12"
 
 "loud-rejection@^1.0.0":
   "integrity" "sha1-W0b4AUft7leIcPCG0Eghz5mOVR8="
@@ -11556,10 +11556,10 @@
     "schema-utils" "^3.0.0"
     "semver" "^7.3.2"
 
-"sass@^1.3.0", "sass@^1.30.0", "sass@^1.35.1":
-  "integrity" "sha512-oCisuQJstxMcacOPmxLNiLlj4cUyN2+8xJnG7VanRoh2GOLr9RqkvI4AxA4a6LHVg/rsu+PmxXeGhrdSF9jCiQ=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.35.1.tgz"
-  "version" "1.35.1"
+"sass@^1.3.0", "sass@^1.30.0", "sass@^1.35.2":
+  "integrity" "sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.35.2.tgz"
+  "version" "1.35.2"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
 
