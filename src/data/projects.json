@@ -23,14 +23,14 @@
   {
     "title": "PAKU",
     "describe": "A web application for finding and renting car parks, combined with Google Maps API.",
-    "stack": ["NodeDotJs", "Semanticuireact", "Redux", "Googlemaps"],
+    "stack": ["Nodedotjs", "Semanticuireact", "Redux", "Googlemaps"],
     "git": "https://github.com/knwch/PAKU",
     "demo": "https://paku-cef3a.web.app"
   },
   {
     "title": "Goods Application",
     "describe": "A mobile application for set goods for sale and allow users to discover. Also, users mostly need to interact with Mapbox API.",
-    "stack": ["NodeDotJs", "ReactJs", "Redux", "Mapbox"],
+    "stack": ["Nodedotjs", "ReactJs", "Redux", "Mapbox"],
     "git": "https://github.com/knwch/Goods-App",
     "demo": ""
   }
