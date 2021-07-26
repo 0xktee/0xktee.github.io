@@ -50,6 +50,7 @@ const Layout = ({ children }) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta name="theme-color" content="#2cf1aa"></meta>
         <title>Korrawich's Portfolio</title>
         <meta
           name="description"
