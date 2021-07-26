@@ -4,7 +4,7 @@ import { m, LazyMotion, domAnimation } from 'framer-motion'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import dayjs from 'dayjs'
 import lottie from 'lottie-web'
-import medi from '../assets/lottiefiles/57088-no-ads.json'
+import me from '../assets/lottiefiles/me_101.json'
 
 import '../styles/introduce.scss'
 
@@ -12,6 +12,17 @@ const useStyles = makeStyles((theme) => ({
   lottieContainer: {
     [theme.breakpoints.only('xs')]: {
       display: 'none',
+    },
+
+    '& div': {
+      zIndex: 1,
+      position: 'relative',
+      marginRight: 48,
+      padding: 24,
+      [theme.breakpoints.down('md')]: {
+        marginRight: 24,
+        padding: 8,
+      },
     },
   },
 }))
@@ -23,19 +34,16 @@ const Introduce = () => {
 
   useEffect(() => {
     lottie.setQuality('low')
-    lottie
-      .loadAnimation({
-        container: animationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: medi,
-        rendererSettings: {
-          viewBoxSize: '410 0 1080 1080',
-          progressiveLoad: true,
-        },
-      })
-      .setSpeed(0.85)
+    lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: me,
+      rendererSettings: {
+        progressiveLoad: true,
+      },
+    })
 
     return () => {
       lottie.destroy()
@@ -80,11 +88,6 @@ const Introduce = () => {
         >
           <Grid className={classes.lottieContainer} item sm={4} md={3}>
             <m.div
-              style={{
-                zIndex: 1,
-                position: 'relative',
-                marginRight: 64,
-              }}
               ref={animationContainer}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -106,11 +109,10 @@ const Introduce = () => {
                 }}
                 overflow="visible"
               >
-                <circle cx="50%" cy="50%" r="42.5%" fill="white" />
                 <text
-                  x="-5%"
+                  x="-3%"
                   y="20%"
-                  fill="#f4f4f4"
+                  fill="#f9f5f1"
                   transform="translate(0, 0) rotate(-30)"
                   style={{
                     fontWeight: 500,
