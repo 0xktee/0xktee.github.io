@@ -4,7 +4,7 @@ import { m, LazyMotion, domAnimation } from 'framer-motion'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import dayjs from 'dayjs'
 import lottie from 'lottie-web'
-import me from '../assets/lottiefiles/me_101.json'
+import me from '../assets/lottiefiles/lf30_sxl9smmj.json'
 
 import '../styles/introduce.scss'
 
@@ -112,7 +112,7 @@ const Introduce = () => {
                 <text
                   x="-3%"
                   y="20%"
-                  fill="#f9f5f1"
+                  fill="white"
                   transform="translate(0, 0) rotate(-30)"
                   style={{
                     fontWeight: 500,
