@@ -97,7 +97,7 @@ const Contact = () => {
             )}
             {IconSocial('Github', 'Github', 'https://github.com/knwch')}
             {IconSocial('Medium', 'Medium', 'https://medium.com/@knwch')}
-            {IconSocial('Twitter', 'Twitter', 'https://twitter.com/0xtango_')}
+            {IconSocial('Twitter', 'Twitter', 'https://twitter.com/0xtango')}
             {IconSocial('teeshirt#1251', 'Discord', '')}
             {IconSocial('Stay motivated.', 'Buymeacoffee', '')}
 
