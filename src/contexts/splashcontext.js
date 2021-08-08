@@ -3,11 +3,7 @@ import React, { createContext, useState } from 'react'
 export const SplashContext = createContext()
 
 const SplashProvider = (props) => {
-
-  // set splash when enter index page
-  const [isSplashFinish, setSplashFinish] = useState(
-    window.location.pathname === '/' ? false : true
-  )
+  const [isSplashFinish, setSplashFinish] = useState(false)
 
   return (
     <SplashContext.Provider value={{ isSplashFinish, setSplashFinish }}>

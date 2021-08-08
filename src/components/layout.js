@@ -29,7 +29,7 @@ const THEME = createMuiTheme({
 })
 
 const Layout = ({ children }) => {
-  const { isSplashFinish } = useContext(SplashContext)
+  const { isSplashFinish, setSplashFinish } = useContext(SplashContext)
 
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 })
 
@@ -59,8 +59,9 @@ const Layout = ({ children }) => {
       </Helmet>
 
       <MuiThemeProvider theme={THEME}>
-        {isSplashFinish ? (
+        {isSplashFinish || window.location.pathname !== '/' ? (
           <>
+            {setSplashFinish(true)}
             <Menubar />
             <main>{children}</main>
 
