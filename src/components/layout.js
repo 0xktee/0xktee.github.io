@@ -12,7 +12,6 @@ import '../styles/layout.scss'
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Menubar from './menubar'
-import Splash from '../components/splash'
 import { SplashContext } from '../contexts/splashcontext'
 
 const THEME = createMuiTheme({
@@ -29,7 +28,7 @@ const THEME = createMuiTheme({
 })
 
 const Layout = ({ children }) => {
-  const { isSplashFinish, setSplashFinish } = useContext(SplashContext)
+  const { setSplashFinish } = useContext(SplashContext)
 
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 })
 
@@ -58,33 +57,29 @@ const Layout = ({ children }) => {
         />
       </Helmet>
 
-      <MuiThemeProvider theme={THEME}>
-        {isSplashFinish || window.location.pathname !== '/' ? (
-          <>
-            {setSplashFinish(true)}
-            <Menubar />
-            <main>{children}</main>
+      {setSplashFinish(true)}
 
-            <footer id="footer">
-              <div className="footer-heart">
-                Made with
-                <span role="img" aria-label="green-heart" className="emoji">
-                  &nbsp;💚&nbsp;
-                </span>
-                by&nbsp;
-                <a
-                  href="https://github.com/knwch"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  &nbsp;k.&nbsp;
-                </a>
-              </div>
-            </footer>
-          </>
-        ) : (
-          <Splash />
-        )}
+      <MuiThemeProvider theme={THEME}>
+        <>
+          <Menubar />
+          <main>{children}</main>
+          <footer id="footer">
+            <div className="footer-heart">
+              Made with
+              <span role="img" aria-label="green-heart" className="emoji">
+                &nbsp;💚&nbsp;
+              </span>
+              by&nbsp;
+              <a
+                href="https://github.com/knwch"
+                rel="noreferrer"
+                target="_blank"
+              >
+                &nbsp;k.&nbsp;
+              </a>
+            </div>
+          </footer>
+        </>
       </MuiThemeProvider>
 
       <div
