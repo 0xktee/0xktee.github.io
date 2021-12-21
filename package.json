@@ -1,61 +1,22 @@
 {
-  "name": "knwch-portfolio",
+  "name": "knwch.github.io",
   "private": true,
-  "description": "A developer portfolio website of Korrawich Khosripetch.",
-  "version": "1.0.0",
-  "author": "Korrawich Khosripetch <korrawich.kho@gmail.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
-    "@icons-pack/react-simple-icons": "^4.6.1",
-    "@material-ui/core": "^4.12.3",
-    "animejs": "^3.2.1",
-    "dayjs": "^1.10.6",
-    "framer-motion": "^4.1.17",
-    "gatsby": "^3.11.0",
-    "gatsby-plugin-gatsby-cloud": "^2.11.0",
-    "gatsby-plugin-image": "^1.11.0",
-    "gatsby-plugin-manifest": "^3.11.0",
-    "gatsby-plugin-material-ui": "^3.0.1",
-    "gatsby-plugin-offline": "^4.11.0",
-    "gatsby-plugin-react-helmet": "^4.11.0",
-    "gatsby-plugin-sass": "^4.11.0",
-    "gatsby-plugin-sharp": "^3.11.0",
-    "gatsby-plugin-smoothscroll": "^1.2.0",
-    "gatsby-source-filesystem": "^3.11.0",
-    "gatsby-transformer-sharp": "^3.11.0",
-    "lottie-web": "^5.7.12",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.37.5"
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "prettier": "^2.3.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/knwch/knwch.github.io"
-  },
-  "bugs": {
-    "url": "https://github.com/knwch/knwch.github.io/issues"
+    "@types/node": "17.0.2",
+    "@types/react": "17.0.37",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "typescript": "4.5.4"
   }
 }
