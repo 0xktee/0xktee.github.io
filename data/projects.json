@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Facial Expression Recognition",
+    "describe": "Facial Expression Recognition System for Food Product Testing using Deep Learning to measure and assess the emotions of the face while eating. MobileNetV2 was chosen for detecting eating behavior, with an accuracy of 95.7%. And VGG16 was chosen for recognizing facial expression, with an accuracy of 92.9%.",
+    "stack": ["Tensorflow", "Opencv", "Plotly"],
+    "git": "",
+    "demo": ""
+  },
+  {
+    "title": "Skill Guider",
+    "describe": "A web application for guiding career skills development, by giving lists of skills which user should improve.",
+    "stack": ["Nestjs", "Angular", "Mongodb"],
+    "git": "https://github.com/knwch/skillguider",
+    "demo": "https://skill-guider.herokuapp.com"
+  },
+  {
+    "title": "Search Content",
+    "describe": "A web application for fetching Google Custom Search API and cleaning results for online courses and articles.",
+    "stack": ["Flask", "Angular", "Firebase"],
+    "git": "https://github.com/knwch/search-content",
+    "demo": ""
+  },
+  {
+    "title": "PAKU",
+    "describe": "A web application for finding and renting car parks, combined with Google Maps API.",
+    "stack": ["Nodedotjs", "Semanticuireact", "Redux", "Googlemaps"],
+    "git": "https://github.com/knwch/PAKU",
+    "demo": "https://paku-cef3a.web.app"
+  },
+  {
+    "title": "Goods Application",
+    "describe": "A mobile application for set goods for sale and allow users to discover. Also, users mostly need to interact with Mapbox API.",
+    "stack": ["Nodedotjs", "ReactJs", "Redux", "Mapbox"],
+    "git": "https://github.com/knwch/Goods-App",
+    "demo": ""
+  }
+]
