@@ -1,0 +1,113 @@
+$mobile-spacing: $spacing * 3;
+$desktop-spacing: $spacing * 7;
+
+.MuiAppBar-root {
+  border-top-style: solid;
+  border-width: $top-border-height;
+  border-color: $yellow-color;
+
+  background-color: $background-dark;
+
+  padding-left: $mobile-spacing;
+  padding-right: $mobile-spacing;
+  @media screen and (min-width: $md) {
+    padding-left: $desktop-spacing;
+    padding-right: $desktop-spacing;
+  }
+}
+
+.desktop-section {
+  display: none;
+  @media screen and (min-width: $md) {
+    display: flex;
+  }
+
+  .MuiList-root .MuiListItem-root {
+    padding: 0 8px;
+
+    margin-left: 16px;
+    margin-right: 16px;
+
+    .MuiListItemText-root .MuiListItemText-primary a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: $yellow-color;
+        visibility: hidden;
+        transition: all 0.25s ease-in-out;
+      }
+
+      &:hover:before {
+        visibility: visible;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.mobile-section {
+  display: flex;
+  @media screen and (min-width: $md) {
+    display: none;
+  }
+
+  .tab-icon {
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    z-index: 1;
+  }
+
+  .tab-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    z-index: 1;
+  }
+
+  .MuiList-root {
+    position: absolute;
+    width: 150px;
+    right: 0px;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .MuiListItem-root {
+      text-align: right;
+      margin-bottom: 16px;
+
+      .MuiListItemText-primary {
+        font-weight: 500;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .end-icon {
+      margin-left: 1rem;
+      color: #181818;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.icon-responsive {
+  visibility: hidden;
+  display: none;
+  z-index: 69;
+
+  > span > img {
+    -webkit-user-drag: none;
+  }
+
+  @media screen and (min-width: $md) {
+    visibility: visible;
+    display: inline;
+  }
+}
