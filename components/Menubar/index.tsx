@@ -164,7 +164,7 @@ const MenuBar: FC = () => {
 
   return (
     <Fragment>
-      <AppBar position="static" elevation={0} id="menubar">
+      <AppBar position="static" color="transparent" elevation={0} id="menubar">
         <Toolbar>
           <Grid justifyContent="space-between" container>
             <Grid item>
