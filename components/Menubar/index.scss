@@ -6,7 +6,9 @@ $desktop-spacing: $spacing * 7;
   border-width: $top-border-height;
   border-color: $yellow-color;
 
-  background-color: $background-dark;
+  &.MuiAppBar-colorPrimary {
+    background-color: $background-dark;
+  }
 
   padding-left: $mobile-spacing;
   padding-right: $mobile-spacing;
