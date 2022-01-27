@@ -1,0 +1,13 @@
+<svg width="300" height="300" viewBox="0 0 300 300"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="coffee">
+        <g id="Group">
+            <path id="Path" fill="#fff" stroke="none" d="M 69.881294 228.92308 L 229.118713 228.92308 L 235.822449 120.391953 L 63.17754 120.391953 Z"/>
+            <path id="path1" fill="#fff" stroke="none" d="M 72.788986 276 L 226.211029 276 L 228.092438 245.538452 L 70.90757 245.538452 Z"/>
+            <path id="path2" fill="#fff" stroke="none" d="M 256.949493 65.538467 L 42.050526 65.538467 L 42.050526 82.153839 L 60.815388 82.153839 L 62.151264 103.776566 L 236.848755 103.776566 L 238.184616 82.153839 L 256.949493 82.153839 Z"/>
+            <path id="path3" fill="#fff" stroke="none" d="M 60.269295 24 L 238.730148 24 L 238.730148 48.92308 L 60.269295 48.92308 Z"/>
+        </g>
+
+    </g>
+</svg>
