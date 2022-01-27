@@ -1,0 +1,28 @@
+footer {
+  background-color: #0f0f0f;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  font-weight: 400;
+
+  .footer-heart {
+    text-align: center;
+
+    a {
+      padding-left: 4px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+
+      &:hover {
+        color: $yellow-color;
+      }
+    }
+
+    .emoji {
+      padding-left: 4px;
+      padding-right: 6px;
+      vertical-align: baseline;
+    }
+  }
+}

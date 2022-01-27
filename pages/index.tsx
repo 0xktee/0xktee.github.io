@@ -1,25 +1,18 @@
-import React, { useContext } from 'react'
+import React, { Fragment } from 'react'
+import type { NextPage } from 'next'
 
-import Layout from '../components/layout'
-import Introduce from '../components/introduce'
-import Projects from '../components/projects'
-import Contact from '../components/contact'
+import Introduce from '../components/layouts/Introduce'
+import Projects from '../components/layouts/Projects'
+import Contact from '../components/layouts/Contact'
 
-import Splash from '../components/splash'
-import { SplashContext } from '../contexts/splashcontext'
-
-const IndexPage = () => {
-  const { isSplashFinish } = useContext(SplashContext)
-
-  return isSplashFinish ? (
-    <Layout>
+const Home: NextPage = () => {
+  return (
+    <Fragment>
       <Introduce />
       <Projects />
       <Contact />
-    </Layout>
-  ) : (
-    <Splash />
+    </Fragment>
   )
 }
 
-export default IndexPage
+export default Home

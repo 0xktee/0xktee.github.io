@@ -5,6 +5,11 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import theme from '../styles/theme'
 
+import { SplashProvider } from '../contexts/splashcontext'
+import { DefaultLayout } from '../components/DefaultLayout'
+
+import '../styles/index.scss'
+
 const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -17,18 +22,27 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Korrawich Development</title>
+        <title>Korrawich Developer</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <meta
+          name="description"
+          content="A developer portfolio website of Korrawich Khosripetch."
+        />
       </Head>
 
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <SplashProvider>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+
+          <DefaultLayout>
+            <Component {...pageProps} />
+          </DefaultLayout>
+        </ThemeProvider>
+      </SplashProvider>
     </>
   )
 }

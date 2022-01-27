@@ -8,7 +8,7 @@ declare module '@mui/styles' {
 // Create a theme instance.
 const theme = createTheme({
   typography: {
-    fontFamily: 'Roboto',
+    fontFamily: 'Airbnb Cereal App',
   },
 })
 

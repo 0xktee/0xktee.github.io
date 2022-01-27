@@ -1,0 +1,126 @@
+$xs: 0px;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;
+
+$spacing: 8px;
+
+$top-border-height: 2px;
+$bar-height-default: 56px + $top-border-height;
+$bar-height-xs: 48px + $top-border-height;
+$bar-height-sm: 64px + $top-border-height;
+
+$mint-color: #2cf1aa;
+$yellow-color: #f1db59;
+
+$background-dark: #181818;
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // font-family: 'Airbnb Cereal App', sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+}
+
+// .cursor {
+//   pointer-events: none;
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 32px;
+//   height: 32px;
+//   box-shadow: 0 0 0 2px #fd4f43 inset;
+
+//   border-radius: 16px;
+//   z-index: 100;
+// }
+
+.box {
+  position: relative;
+
+  &.box-first {
+    padding-bottom: 56px;
+
+    min-height: calc(100vh - $bar-height-default);
+
+    @media screen and (min-width: $xs) and (orientation: landscape) {
+      min-height: calc(100vh - $bar-height-xs);
+    }
+
+    @media screen and (min-width: $sm) {
+      min-height: calc(100vh - $bar-height-sm);
+    }
+  }
+
+  &.box-default {
+    min-height: 100vh;
+    @media screen and (min-width: $xs) and (orientation: landscape) {
+      min-height: 100vh;
+    }
+
+    @media screen and (min-width: $sm) {
+      min-height: 100vh;
+    }
+  }
+
+  &.dark-background {
+    background-color: #181818;
+  }
+
+  &.light-background {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      background-image: url('../assets/15120.svg');
+      background-size: 350px 350px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      will-change: transform;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.MuiTypography-root {
+  &.MuiTypography-h1 {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  &.MuiTypography-h2 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  // &.MuiTypography-h3 {
+  //   font-size: 1.75rem;
+  // }
+
+  &.MuiTypography-body1 {
+    font-size: 1rem;
+  }
+
+  // &.MuiTypography-body2 {
+  //   font-size: 0.95rem;
+  // }
+}
