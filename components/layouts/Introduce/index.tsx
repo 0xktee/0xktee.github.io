@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, FC } from 'react'
-import Image from 'next/image'
 
 import { Link as LinkScroll } from 'react-scroll'
-import { motion, LazyMotion, domAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Typography, Box, Grid, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import dayjs from 'dayjs'

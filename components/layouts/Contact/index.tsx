@@ -1,5 +1,4 @@
 import React, { useEffect, FC, useState } from 'react'
-import Link from 'next/link'
 
 import {
   Box,

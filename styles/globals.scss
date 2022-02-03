@@ -86,7 +86,7 @@ body {
     overflow: hidden;
     position: relative;
 
-    &::before {
+    &:before {
       background-image: url('../assets/15120.svg');
       background-size: 350px 350px;
       position: fixed;
@@ -123,4 +123,26 @@ body {
   // &.MuiTypography-body2 {
   //   font-size: 0.95rem;
   // }
+}
+
+%underline-hover {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: $yellow-color;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
 }

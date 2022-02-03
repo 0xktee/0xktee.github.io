@@ -1,14 +1,6 @@
 import React, { Fragment, FC, useState } from 'react'
-import Link from 'next/link'
 
-import {
-  m,
-  motion,
-  AnimateSharedLayout,
-  AnimatePresence,
-  LazyMotion,
-  domAnimation,
-} from 'framer-motion'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import {
   Box,
   Typography,

@@ -1,6 +1,6 @@
 import React, { Fragment, ReactNode } from 'react'
 
-import { SplashProvider, useSplash } from '../../contexts/splashcontext'
+import { useSplash } from '../../contexts/splashcontext'
 
 import Menubar from '../Menubar'
 import Footer from '../Footer'

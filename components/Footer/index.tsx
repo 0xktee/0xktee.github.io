@@ -1,5 +1,4 @@
 import React, { Fragment, FC } from 'react'
-import Link from 'next/link'
 
 const Footer: FC = () => {
   return (

@@ -10,11 +10,9 @@ $desktop-spacing: $spacing * 7;
     background-color: $background-dark;
   }
 
-  padding-left: $mobile-spacing;
-  padding-right: $mobile-spacing;
+  padding: 0px $mobile-spacing;
   @media screen and (min-width: $md) {
-    padding-left: $desktop-spacing;
-    padding-right: $desktop-spacing;
+    padding: 0px $desktop-spacing;
   }
 }
 
@@ -34,28 +32,9 @@ $desktop-spacing: $spacing * 7;
       color: white;
       font-size: 1rem;
       font-weight: 600;
-
       text-decoration: none;
 
-      position: relative;
-      cursor: pointer;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -2px;
-        left: 0;
-        background-color: $yellow-color;
-        visibility: hidden;
-        transition: all 0.25s ease-in-out;
-      }
-
-      &:hover:before {
-        visibility: visible;
-        width: 100%;
-      }
+      @extend %underline-hover;
     }
   }
 }
