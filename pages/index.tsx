@@ -1,18 +1,22 @@
-import React, { Fragment } from 'react'
-import type { NextPage } from 'next'
+import { motion } from 'framer-motion'
 
 import Introduce from '../components/layouts/Introduce'
-import Projects from '../components/layouts/Projects'
+import Technology from '../components/layouts/Technology'
 import Contact from '../components/layouts/Contact'
 
-const Home: NextPage = () => {
+export default function HomePage() {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: 'easeIn',
+      }}
+    >
       <Introduce />
-      <Projects />
+      <Technology />
       <Contact />
-    </Fragment>
+    </motion.div>
   )
 }
-
-export default Home

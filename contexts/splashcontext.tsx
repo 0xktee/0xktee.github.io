@@ -1,36 +1,34 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 
+type Props = {
+  children: ReactNode
+}
+
 type splashContextType = {
-  isSplashFinish: boolean
+  splashFinished: boolean
   setSplashFinish: () => void
 }
 
 const splashContextDefaultValues: splashContextType = {
-  isSplashFinish: false,
+  splashFinished: false,
   setSplashFinish: () => {},
 }
 
-const SplashContext = createContext<splashContextType>(
-  splashContextDefaultValues
-)
+const SplashContext = createContext<splashContextType>(splashContextDefaultValues)
 
 export function useSplash() {
   return useContext(SplashContext)
 }
 
-type Props = {
-  children: ReactNode
-}
-
 export function SplashProvider({ children }: Props) {
-  const [isSplashFinish, setIsSplashFinish] = useState<boolean>(false)
+  const [splashFinished, setSplashFinished] = useState<boolean>(false)
 
   const setSplashFinish = () => {
-    setIsSplashFinish(true)
+    setSplashFinished(true)
   }
 
   const value = {
-    isSplashFinish,
+    splashFinished,
     setSplashFinish,
   }
 
@@ -40,24 +38,3 @@ export function SplashProvider({ children }: Props) {
     </>
   )
 }
-
-// const SplashProvider = (props: {
-//   children:
-//     | boolean
-//     | React.ReactChild
-//     | React.ReactFragment
-//     | React.ReactPortal
-//     | null
-//     | undefined
-// }) => {
-//   const [isSplashFinish, setSplashFinish] = useState(false)
-
-//   return (
-//     <SplashContext.Provider value={{ isSplashFinish, setSplashFinish }}>
-//       {props.children}
-//     </SplashContext.Provider>
-//   )
-// }
-
-// // eslint-disable-next-line import/no-anonymous-default-export
-// export default ({ element }) => <SplashProvider>{element}</SplashProvider>

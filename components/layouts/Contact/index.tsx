@@ -1,129 +1,116 @@
-import React, { useEffect, FC, useState } from 'react'
-
 import {
-  Box,
-  Typography,
-  Card,
-  CardContent,
+  ActionIcon,
+  Container,
+  CopyButton,
+  createStyles,
   Grid,
+  Group,
+  Space,
+  Text,
+  Title,
   Tooltip,
-} from '@mui/material'
+} from '@mantine/core'
 import {
-  Twitter,
-  Linkedin,
-  Github,
-  Medium,
-  Discord,
-  Buymeacoffee,
-} from '@icons-pack/react-simple-icons'
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconBrandMedium,
+  IconCheck,
+  IconCopy,
+} from '@tabler/icons'
 
-import ParallaxIcon from '../../ParallaxIcon'
-import CoffeeIcon from '../../../assets/coffee.svg'
-import WrenchIcon from '../../../assets/wrench.svg'
+import ButtonCustom from '../../ButtonCustom'
 
-const componentMapping: any = {
-  Twitter,
-  Linkedin,
-  Github,
-  Medium,
-  Discord,
-  Buymeacoffee,
-}
+const useStyles = createStyles((theme) => ({
+  container: {
+    minHeight: '100vh',
+    ...theme.other.flexCenter,
+  },
+  button: {
+    height: '56px',
 
-const Contact: FC = () => {
-  const [isCopy, setIsCopy] = useState(false)
+    '.mantine-Button-inner': {
+      justifyContent: 'flex-start',
+    },
+  },
+}))
 
-  const copyTextToClipboard = (text: any) => {
-    navigator.clipboard.writeText(text)
-    setIsCopy(true)
-  }
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsCopy(false)
-    }, 3000)
-  }, [isCopy])
-
-  const IconSocial = ({ icon, href }: any) => {
-    const Component = componentMapping[icon]
-
-    return (
-      <Grid xs={6} sm={4} item>
-        <a href={href} target="_blank" rel="noreferrer">
-          <Card variant="outlined" className="social-card">
-            <CardContent className="social-container">
-              <Component className="icon-social" />
-              <Typography className="text-social">{icon}</Typography>
-            </CardContent>
-          </Card>
-        </a>
-      </Grid>
-    )
-  }
+export default function Contact() {
+  const { classes } = useStyles()
 
   return (
-    <Box
-      id="contact"
-      display="flex"
-      className="box box-default dark-background"
-      alignItems="center"
-    >
-      <ParallaxIcon
-        offset={150}
-        src={CoffeeIcon}
-        size="80px"
-        top="15%"
-        right="20%"
-        style={{ rotate: -7 }}
-      />
+    <Container className={classes.container} size="md">
+      <Title order={2}>Get In Touch</Title>
 
-      <ParallaxIcon
-        src={WrenchIcon}
-        size="90px"
-        bottom="20%"
-        right="7%"
-        style={{ rotate: -15 }}
-      />
+      <Space h="xs" />
 
-      <Grid justifyContent="center" container>
-        <Grid xs={11} md={10} spacing={2} container>
-          <Grid xs={12} item>
-            <Typography component="h2" variant="h2">
-              Get In Touch
-            </Typography>
-            <Typography component="p" variant="body1">
-              If you have something to discuss, please feel free to contact me
-              anytime.
-            </Typography>
-          </Grid>
+      <Text size="md">
+        If you have something to discuss, please feel free to contact me anytime.
+      </Text>
 
-          <IconSocial
-            icon="Linkedin"
-            href="https://www.linkedin.com/in/knwch"
-          />
+      <Space h={32} />
 
-          <IconSocial icon="Github" href="https://github.com/knwch" />
+      <Grid grow>
+        <Grid.Col span={12} xs={4} sm={4}>
+          <ButtonCustom
+            className={classes.button}
+            leftIcon={<IconBrandLinkedin />}
+            fullWidth
+            component="a"
+            href="https://linkedin.com/in/knwch"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </ButtonCustom>
+        </Grid.Col>
 
-          <IconSocial icon="Medium" href="https://medium.com/@knwch" />
+        <Grid.Col span={12} xs={4} sm={4}>
+          <ButtonCustom
+            className={classes.button}
+            leftIcon={<IconBrandGithub />}
+            fullWidth
+            component="a"
+            href="https://github.com/knwch"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </ButtonCustom>
+        </Grid.Col>
 
-          <Grid xs={12} item>
-            <Typography component="h3" className="email-header">
-              Email
-            </Typography>
-            <Tooltip title={isCopy ? 'Copied' : 'Copy to Clipboard'}>
-              <Typography
-                component="p"
-                onClick={() => copyTextToClipboard('korrawich.kho@gmail.com')}
-                className="email-text"
-              >
-                korrawich.kho@gmail.com
-              </Typography>
-            </Tooltip>
-          </Grid>
-        </Grid>
+        <Grid.Col span={12} xs={4} sm={4}>
+          <ButtonCustom
+            className={classes.button}
+            leftIcon={<IconBrandMedium />}
+            fullWidth
+            component="a"
+            href="https://knwch.medium.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Medium
+          </ButtonCustom>
+        </Grid.Col>
       </Grid>
-    </Box>
+
+      <Space h={32} />
+
+      <Text size="sm" weight={600}>
+        Email
+      </Text>
+
+      <Group align="flex-end" spacing="xs">
+        <Text size="xl">korrawich.kho@gmail.com</Text>
+        <CopyButton value="korrawich.kho@gmail.com" timeout={2000}>
+          {({ copied, copy }) => (
+            <Tooltip label={copied ? 'Copied' : 'Copy'} withArrow position="right">
+              <ActionIcon color={copied ? 'teal' : 'gray'} onClick={copy}>
+                {copied ? <IconCheck size={16} /> : <IconCopy size={16} />}
+              </ActionIcon>
+            </Tooltip>
+          )}
+        </CopyButton>
+      </Group>
+    </Container>
   )
 }
-
-export default Contact

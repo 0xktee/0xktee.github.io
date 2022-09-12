@@ -1,9 +1,9 @@
 import React, { Fragment, ReactNode } from 'react'
 
-import { useSplash } from '../../contexts/splashcontext'
+import { useSplash } from '../../contexts/SplashContext'
 
-import Menubar from '../Menubar'
-import Footer from '../Footer'
+import Menubar from '../layouts/Menubar'
+import Footer from '../layouts/Footer'
 import Splash from '../Splash'
 
 type DefaultLayoutProps = {
@@ -11,11 +11,11 @@ type DefaultLayoutProps = {
 }
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
-  const { isSplashFinish } = useSplash()
+  const { splashFinished } = useSplash()
 
   return (
     <Fragment>
-      {isSplashFinish ? (
+      {splashFinished ? (
         <Fragment>
           <Menubar />
           {children}

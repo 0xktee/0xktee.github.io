@@ -1,15 +1,72 @@
-// styles/theme.ts
-import { createTheme, Theme } from '@mui/material/styles'
+import { MantineThemeOverride } from '@mantine/core'
 
-declare module '@mui/styles' {
-  interface DefaultTheme extends Theme {}
-}
+const BG_LIGHT_COLOR = '#f8f8f8'
+const BG_DARK_COLOR = '#1e1e1e'
 
-// Create a theme instance.
-const theme = createTheme({
-  typography: {
-    fontFamily: 'Airbnb Cereal App',
+const theme: MantineThemeOverride = {
+  // Defines color scheme for all components, defaults to "light"
+  colorScheme: 'light',
+
+  // Default border-radius used for most elements
+  defaultRadius: '8px',
+
+  // Object of arrays with 10 colors
+  colors: {
+    lime: ['#d7fe38'],
+    bgLight: ['#fdfdfd'],
   },
-})
+
+  // Should be key of theme.colors, cannot be actual color value
+  primaryColor: 'dark',
+
+  // font-family and line-height used in most components
+  fontFamily:
+    'Airbnb Cereal, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, sans-serif',
+
+  // h1-h6 styles, used in Title and TypographyStylesProvider components
+  headings: {
+    fontFamily: 'Lora, serif',
+    fontWeight: 600,
+    sizes: {
+      h2: { fontSize: 28 },
+    },
+  },
+
+  other: {
+    menuHeight: '48px',
+
+    font: {
+      serif: {
+        fontFamily: 'Lora, serif',
+        fontWeight: 600,
+      },
+    },
+
+    flexCenter: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+
+    userDrag: {
+      none: {
+        WebkitUserDrag: 'none',
+        KhtmlUserDrag: 'none',
+        MozUserDrag: 'none',
+        OUserDrag: 'none',
+        userDrag: 'none',
+      },
+    },
+
+    userSelect: {
+      none: {
+        WebkitUserSelect: 'none',
+        KhtmlUserSelect: 'none',
+        MozUserSelect: 'none',
+        userSelect: 'none',
+      },
+    },
+  },
+}
 
 export default theme
