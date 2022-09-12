@@ -30,7 +30,7 @@ jobs:
           restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Installing packages
-        run: npm ci
+        run: npm i
 
       - name: Build App
         run: npm run build && npm run export && touch ./out/.nojekyll
