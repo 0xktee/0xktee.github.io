@@ -72,7 +72,7 @@ export default function Contact() {
             leftIcon={<IconBrandGithub />}
             fullWidth
             component="a"
-            href="https://github.com/knwch"
+            href="https://github.com/zkorra"
             target="_blank"
             rel="noreferrer"
           >
@@ -87,7 +87,7 @@ export default function Contact() {
             leftIcon={<IconBrandMedium />}
             fullWidth
             component="a"
-            href="https://knwch.medium.com"
+            href="https://zkorra.medium.com"
             target="_blank"
             rel="noreferrer"
           >
