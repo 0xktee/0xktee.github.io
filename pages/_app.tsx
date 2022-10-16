@@ -16,11 +16,11 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <Fragment>
       <Head>
-        <title>Korrawich Developer</title>
+        <title>Korrawich&apos;s Portfolio</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta
           name="description"
-          content="A developer portfolio website of Korrawich Khosripetch."
+          content="The website for Korrawich Khosripetch's online portfolio."
         />
       </Head>
 

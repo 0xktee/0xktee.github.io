@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
 
 import { Box, Button, createStyles } from '@mantine/core'
-import type { ButtonProps, UnstyledButtonProps } from '@mantine/core'
+import type { ButtonProps } from '@mantine/core'
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles((theme, { variant }: ButtonProps) => ({
   wrapper: {
     position: 'relative',
 
@@ -19,32 +19,38 @@ const useStyles = createStyles((theme) => ({
       height: '100%',
 
       /* other */
-      boxShadow: '4px 4px 0px black',
+      background: 'white',
+      borderRadius: theme.radius.sm,
+      boxShadow: `0px 0px 0px 1px ${theme.colors.orenji} inset`,
     },
 
     'button, a': {
       zIndex: 1,
-      backgroundColor: theme.colors.lime,
+      backgroundColor:
+        variant === undefined || variant === 'filled' ? theme.colors.orenji : 'white',
 
       fontWeight: 500,
-      color: 'black',
+      color: variant === undefined || variant === 'filled' ? 'white' : theme.colors.orenji,
 
       transition: 'all 0.2s ease',
-      border: '1px solid black',
-      borderRadius: 0,
+
+      borderColor: theme.colors.orenji,
+      borderRadius: theme.radius.sm,
       boxShadow: 'none',
 
       '&:hover': {
-        transform: 'translate(4px, 4px)',
-        backgroundColor: theme.colors.lime,
+        transform: 'translate(4px, -4px)',
+        backgroundColor:
+          variant === undefined || variant === 'filled' ? theme.colors.orenji : 'white',
+        color: variant === undefined || variant === 'filled' ? 'white' : theme.colors.orenji,
       },
     },
   },
 }))
 
 export default function ButtonCustom(props: ButtonProps & any) {
-  const { classes } = useStyles()
-  const { children, fullWidth } = props
+  const { children, fullWidth, variant, radius } = props
+  const { classes } = useStyles({ variant, radius })
 
   return (
     <Fragment>

@@ -1,7 +1,5 @@
 import { MantineThemeOverride } from '@mantine/core'
-
-const BG_LIGHT_COLOR = '#f8f8f8'
-const BG_DARK_COLOR = '#1e1e1e'
+import customComponents from './components'
 
 const theme: MantineThemeOverride = {
   // Defines color scheme for all components, defaults to "light"
@@ -13,7 +11,9 @@ const theme: MantineThemeOverride = {
   // Object of arrays with 10 colors
   colors: {
     lime: ['#d7fe38'],
+    orenji: ['#ff5b1d'],
     bgLight: ['#fdfdfd'],
+    bgDark: ['#151515'],
   },
 
   // Should be key of theme.colors, cannot be actual color value
@@ -67,6 +67,8 @@ const theme: MantineThemeOverride = {
       },
     },
   },
+
+  components: customComponents,
 }
 
 export default theme

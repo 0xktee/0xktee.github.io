@@ -39,12 +39,12 @@ export default function Contact() {
 
   return (
     <Container className={classes.container} size="md">
-      <Title order={2}>Get In Touch</Title>
+      <Title order={2}>Get In Touch.</Title>
 
       <Space h="xs" />
 
       <Text size="md">
-        If you have something to discuss, please feel free to contact me anytime.
+        If you have something to discuss, please feel free to contact me at any time.
       </Text>
 
       <Space h={32} />
@@ -53,10 +53,11 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
+            variant="outline"
             leftIcon={<IconBrandLinkedin />}
             fullWidth
             component="a"
-            href="https://linkedin.com/in/knwch"
+            href="https://linkedin.com/in/korrawichk"
             target="_blank"
             rel="noreferrer"
           >
@@ -67,6 +68,7 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
+            variant="outline"
             leftIcon={<IconBrandGithub />}
             fullWidth
             component="a"
@@ -81,6 +83,7 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
+            variant="outline"
             leftIcon={<IconBrandMedium />}
             fullWidth
             component="a"

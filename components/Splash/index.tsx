@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import anime from 'animejs'
-import { Container, createStyles } from '@mantine/core'
+import { Box, Container, createStyles, Space } from '@mantine/core'
 
 import { useSplash } from '../../contexts/SplashContext'
 
 const useStyles = createStyles((theme) => ({
   container: {
     minHeight: '100vh',
+
+    textAlign: 'center',
     ...theme.other.flexCenter,
   },
+  number: { fontSize: '1.1rem', color: theme.colors.orenji },
 }))
 
 export default function Splash() {
@@ -21,7 +24,7 @@ export default function Splash() {
   const [visibility, setVisibility] = useState('hidden')
 
   const fill = 'none'
-  const strokeColor = '#000000'
+  const strokeColor = '#ff5b1d'
   const strokeWidth = '5'
 
   useEffect(() => {
@@ -30,12 +33,20 @@ export default function Splash() {
         targets: '#splash path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1000,
+        duration: 800,
         delay: function (el, i) {
-          return i * 200
+          return i * 160
         },
         direction: 'alternate',
         loop: false,
+      })
+
+      anime({
+        targets: '#counter',
+        innerHTML: ['0%', '100%'],
+        easing: 'easeOutCirc',
+        round: 1,
+        duration: 1000,
       })
 
       setVisibility('visible')
@@ -46,6 +57,7 @@ export default function Splash() {
 
       return () => {
         anime.remove('#splash path')
+        anime.remove('#counter')
         clearTimeout(timer)
       }
     } else {
@@ -113,6 +125,10 @@ export default function Splash() {
           strokeWidth={strokeWidth}
         />
       </svg>
+
+      <Space h="xl" />
+
+      <Box id="counter" className={classes.number} />
     </Container>
   )
 }

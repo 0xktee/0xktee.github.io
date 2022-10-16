@@ -10,7 +10,6 @@ export default function GlobalStyles() {
 
           margin: 0,
 
-          // transition: 'background 0.2s',
           backgroundColor: theme.colors.bgLight,
 
           textRendering: 'geometricPrecision',
@@ -21,7 +20,7 @@ export default function GlobalStyles() {
 
           '&::before': {
             content: '""',
-            zIndex: 69,
+            zIndex: 50,
             backgroundImage: `url(${'/assets/background-noise.png'})`,
             minHeight: '100%',
             width: '100%',
@@ -36,8 +35,8 @@ export default function GlobalStyles() {
         },
 
         '::selection': {
-          background: theme.colors.lime,
-          color: 'black',
+          background: theme.colors.orenji,
+          color: 'white',
         },
       })}
     />
