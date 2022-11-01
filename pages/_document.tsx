@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
           <script
             defer
             src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon={`{"token": ${process.env.CFWA_TOKEN}`}
+            data-cf-beacon={`{"token": "${process.env.CFWA_TOKEN}"}`}
           />
           {/* End Cloudflare Web Analytics */}
         </Head>
