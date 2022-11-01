@@ -37,7 +37,7 @@ export default function Introduce() {
       <Grid columns={24} align="center" px="md">
         <Grid.Col span={9} xs={8} sm={6} md={6}>
           <Box className={classes.wrapper}>
-            <Image src="/assets/me.webp" alt="knwch" layout="fill" />
+            <Image src="/assets/me.webp" alt="knwch" layout="fill" priority={true} />
           </Box>
         </Grid.Col>
         <Grid.Col span={24} xs={24} sm={24} md={17} offsetMd={1}>
