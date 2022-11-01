@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-          
+
       - name: Cache
         uses: actions/cache@v2
         with:
@@ -34,6 +34,8 @@ jobs:
 
       - name: Build App
         run: npm run build && npm run export && touch ./out/.nojekyll
+        env:
+          CFWA_TOKEN: ${{ secrets.CFWA_TOKEN }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
