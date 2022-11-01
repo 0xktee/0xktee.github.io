@@ -11,6 +11,14 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+
+          {/* Cloudflare Web Analytics */}
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": ${process.env.CFWA_TOKEN}`}
+          />
+          {/* End Cloudflare Web Analytics */}
         </Head>
         <body>
           <Main />
