@@ -57,7 +57,7 @@ export default function Contact() {
             leftIcon={<IconBrandLinkedin />}
             fullWidth
             component="a"
-            href="https://linkedin.com/in/korrawichk"
+            href="https://linkedin.com/in/korrawich-khosripetch"
             target="_blank"
             rel="noreferrer"
           >
