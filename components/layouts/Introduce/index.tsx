@@ -54,8 +54,8 @@ export default function Introduce() {
           <Space h="lg" />
 
           <Text size="md">
-            I&apos;m a front-end developer, enthusiastic about building ***** things and bringing
-            wonderful experiences for normies. I&apos;m based in Thailand.
+            I&apos;m a junior developer, who love learning and building stuff. I have a passion to
+            bring a wonderful experience for people through technology. I&apos;m based in Thailand.
           </Text>
 
           <Space h="lg" />
