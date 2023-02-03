@@ -4,6 +4,8 @@ const useStyles = createStyles((theme) => ({
   container: {
     minHeight: '100vh',
     ...theme.other.flexCenter,
+
+    textAlign: 'justify',
   },
 }))
 
@@ -23,9 +25,8 @@ export default function About() {
 
       <Space h="sm" />
       <Text size="md">
-        I graduated with a bachelor&apos;s degree in Applied Computer Science in 2021. I&apos;m
-        driven by a passion for Web3 and successfully launched my own NFT project from scratch. I
-        also had fun building utility products for users in the space.
+        After I graduated with a bachelor&apos;s degree in Applied Computer Science in 2021. I&apos;m driven by a passion for Web3 and successfully launched my own NFT project from
+        scratch. I also had fun building utility products for users in the space.
       </Text>
 
       <Space h="sm" />
