@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { createStyles, Button, Navbar, Text, Box } from '@mantine/core'
 
-import { IconApple } from '@tabler/icons'
+import { IconApple } from '@tabler/icons-react'
 
 const useStyles = createStyles((theme) => ({
   navbar: {

@@ -1,6 +1,6 @@
 import { Container, createStyles, Group, Header, useMantineTheme, Button } from '@mantine/core'
 
-import { IconArrowUpRight } from '@tabler/icons'
+import { IconArrowUpRight } from '@tabler/icons-react'
 
 const useStyles = createStyles((theme) => ({
   outer: {

@@ -16,7 +16,7 @@ import {
   IconBrandMedium,
   IconCheck,
   IconCopy,
-} from '@tabler/icons'
+} from '@tabler/icons-react'
 
 import ButtonCustom from '../../ButtonCustom'
 

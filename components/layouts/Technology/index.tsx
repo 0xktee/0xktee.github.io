@@ -13,7 +13,7 @@ import {
 } from '@mantine/core'
 import Image, { ImageProps } from 'next/image'
 
-import { IconBrandMantine } from '@tabler/icons'
+import { IconBrandMantine } from '@tabler/icons-react'
 
 const useStyles = createStyles((theme) => ({
   container: {
