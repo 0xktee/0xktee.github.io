@@ -18,7 +18,6 @@ const useStyles = createStyles((theme) => ({
     overflow: 'hidden',
 
     borderRadius: '1024px',
-    boxShadow: '0px 0px 0px 1px black',
 
     ...theme.other.userSelect.none,
 
@@ -42,25 +41,28 @@ export default function Introduce() {
         </Grid.Col>
         <Grid.Col span={24} xs={24} sm={24} md={17} offsetMd={1}>
           <Title order={1} size={64}>
-            Korrawihc.
+            Heya, I&apos;m Tee.
+            <br />A Developer.
           </Title>
 
-          <Space h={2} />
+          {/* <Space h="lg" />
 
           <Text size="md" color="dimmed">
             /korrawich khosripetch/
-          </Text>
+          </Text> */}
 
-          <Space h="lg" />
+          <Space h="xs" />
 
           <Text size="md">
             I&apos;m a junior developer, who love learning and building stuff. I have a passion to
             bring a wonderful experience for people through technology. I&apos;m based in Thailand.
           </Text>
 
-          <Space h="lg" />
+          <Space h="xl" />
 
-          <ButtonCustom onClick={() => scrollTo({ y: 5000 })}>Reach me</ButtonCustom>
+          <ButtonCustom variant="outline" onClick={() => scrollTo({ y: 5000 })}>
+            Reach me
+          </ButtonCustom>
         </Grid.Col>
       </Grid>
 

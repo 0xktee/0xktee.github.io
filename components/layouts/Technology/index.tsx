@@ -45,29 +45,25 @@ export default function Technology() {
   const Tech = (props: any) => {
     const { label, icon } = props
     return (
-      <Group className={classes.iconWrapper} spacing="sm" my="xs">
+      <Group className={classes.iconWrapper} spacing="sm" my="sm">
         {typeof icon === 'string' ? <IconImage src={icon} /> : icon}
 
-        <Text size="sm">{label}</Text>
+        <Text size="md">{label}</Text>
       </Group>
     )
   }
 
   return (
     <Container className={classes.container} size="md" py="xl">
-      <Title order={2} align="left">
-        Loved
-        <br />
-        Technologies.
-      </Title>
+      <Title order={2}>Loved Technologies.</Title>
 
       <Space h="xl" />
 
       <Grid gutter={32}>
         <Grid.Col span={12} xs={5} sm={4}>
-          <Title order={5} align="left">
+          <Text align="left" size="sm" weight={600}>
             Programming Languages
-          </Title>
+          </Text>
 
           <Divider my="xs" />
 
@@ -79,9 +75,9 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={7} sm={8}>
-          <Title order={5} align="left">
+          <Text align="left" size="sm" weight={600}>
             Web Development
-          </Title>
+          </Text>
 
           <Divider my="xs" />
 
@@ -99,9 +95,9 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={5} sm={4}>
-          <Title order={5} align="left">
+          <Text align="left" size="sm" weight={600}>
             Web 3
-          </Title>
+          </Text>
 
           <Divider my="xs" />
 
@@ -112,9 +108,9 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={7} sm={8}>
-          <Title order={5} align="left">
+          <Text align="left" size="sm" weight={600}>
             Tools
-          </Title>
+          </Text>
           <Divider my="xs" />
           <SimpleGrid cols={2} spacing={0}>
             <Tech label="Cloudflare" icon="/assets/technologies/cib-cloudflare.svg" />

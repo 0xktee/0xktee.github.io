@@ -8,10 +8,10 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     zIndex: 80,
 
-    background: 'white',
+    background: "#161616",
 
     textAlign: 'center',
-    color: 'black',
+    color: theme.colors.bgLight,
 
     ...theme.other.userSelect.none,
   },
@@ -26,7 +26,7 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       backgroundColor: theme.colors.orenji,
-      color: 'white',
+      color: 'black',
     },
   },
 }))
@@ -36,7 +36,7 @@ export default function Footer() {
 
   return (
     <Fragment>
-      <Divider color="gray.2" />
+      <Divider />
       <Box className={classes.container} py="md">
         <footer>
           <Text>

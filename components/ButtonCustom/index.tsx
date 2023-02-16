@@ -19,30 +19,32 @@ const useStyles = createStyles((theme, { variant }: ButtonProps) => ({
       height: '100%',
 
       /* other */
-      background: 'white',
-      borderRadius: theme.radius.sm,
-      boxShadow: `0px 0px 0px 1px ${theme.colors.orenji} inset`,
+      background: theme.colors.bgDark,
+      borderRadius: theme.radius.xs,
+      boxShadow: `0px 0px 0px 0.08em ${
+        variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji
+      } inset`,
     },
 
     'button, a': {
       zIndex: 1,
-      backgroundColor:
-        variant === undefined || variant === 'filled' ? theme.colors.orenji : 'white',
+      backgroundColor: variant === 'outline' ? theme.colors.bgDark : theme.colors.orenji,
 
       fontWeight: 500,
-      color: variant === undefined || variant === 'filled' ? 'white' : theme.colors.orenji,
+      color: variant === 'outline' ? 'white' : 'black',
 
       transition: 'all 0.2s ease',
 
-      borderColor: theme.colors.orenji,
-      borderRadius: theme.radius.sm,
+      borderWidth: '0.08em',
+      borderColor: variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji,
+      borderRadius: theme.radius.xs,
       boxShadow: 'none',
 
       '&:hover': {
         transform: 'translate(4px, -4px)',
-        backgroundColor:
-          variant === undefined || variant === 'filled' ? theme.colors.orenji : 'white',
-        color: variant === undefined || variant === 'filled' ? 'white' : theme.colors.orenji,
+        backgroundColor: variant === 'outline' ? theme.colors.bgDark : theme.colors.orenji,
+        color: variant === 'outline' ? 'white' : 'black',
+        borderColor: variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji,
       },
     },
   },

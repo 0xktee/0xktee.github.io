@@ -27,20 +27,22 @@ const useStyles = createStyles((theme) => ({
 
     background: 'transparent',
 
+    color: theme.colors.bgLight,
+
     fontWeight: 500,
     border: 'none',
 
     ':hover': {
-      background: theme.colors.orenji,
-      color: 'white',
+      background: 'white',
+      color: 'black',
     },
   },
   buttonLogo: {
     background: 'transparent',
 
-    ...theme.other.font.serif,
+    fontWeight: 700,
     fontSize: '1.5rem',
-    color: theme.colors.orenji,
+    color: theme.colors.bgLight,
 
     border: 'none',
     borderRadius: 0,
@@ -79,7 +81,7 @@ export default function MenuBar() {
         </Button>
 
         <Group spacing="xs" px={0}>
-          <ButtonNavigator href="https://linkedin.com/in/korrawichk">LinkedIn</ButtonNavigator>
+          <ButtonNavigator href="https://linkedin.com/in/korrawich-khosripetch">LinkedIn</ButtonNavigator>
 
           <ButtonNavigator href="https://github.com/zkorra">Github</ButtonNavigator>
         </Group>

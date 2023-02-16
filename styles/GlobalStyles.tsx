@@ -10,7 +10,8 @@ export default function GlobalStyles() {
 
           margin: 0,
 
-          backgroundColor: theme.colors.bgLight,
+          backgroundColor: theme.colors.bgDark,
+          color: theme.colors.bgLight,
 
           textRendering: 'geometricPrecision',
           WebkitFontSmoothing: 'subpixel-antialiased',
@@ -36,7 +37,7 @@ export default function GlobalStyles() {
 
         '::selection': {
           background: theme.colors.orenji,
-          color: 'white',
+          color: 'black',
         },
       })}
     />

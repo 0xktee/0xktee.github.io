@@ -53,7 +53,6 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
             leftIcon={<IconBrandLinkedin />}
             fullWidth
             component="a"
@@ -68,7 +67,6 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
             leftIcon={<IconBrandGithub />}
             fullWidth
             component="a"
@@ -83,7 +81,6 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
             leftIcon={<IconBrandMedium />}
             fullWidth
             component="a"

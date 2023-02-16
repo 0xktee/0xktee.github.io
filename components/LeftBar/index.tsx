@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
     // overflow: 'hidden',
     backgroundColor: theme.colors.orenji,
 
-    color: 'white',
+    color: 'black',
     fontSize: '18px',
 
     ...theme.other.userSelect.none,
@@ -26,7 +26,7 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translate(-50%,-50%)',
     transformOrigin: '0 0',
 
-    ...theme.other.font.serif,
+    fontWeight: 600,
 
     whiteSpace: 'nowrap',
   },
@@ -39,13 +39,13 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translateY(50%)',
     transformOrigin: 'bottom left',
 
-    borderColor: 'white',
-    color: 'white',
+    borderColor: 'rgba(0, 0, 0, 0.75)',
+    color: 'black',
     fontWeight: 500,
 
     ':hover': {
-      backgroundColor: 'white',
-      color: theme.colors.orenji,
+      backgroundColor: 'black',
+      color: 'white',
     },
 
     ':active': {
@@ -79,7 +79,7 @@ export default function LeftBar() {
           <IconApple size={28} stroke={1.8} />
         </motion.div>
       </Box>
-      <Text className={classes.text}>zkorra</Text>
+      <Text className={classes.text}>korrawich khosripetch</Text>
       <Button
         className={classes.button}
         variant="outline"
