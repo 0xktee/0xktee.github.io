@@ -8,7 +8,8 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     zIndex: 80,
 
-    background: "#161616",
+    background: theme.colors.bgDark,
+    borderColor: 'black',
 
     textAlign: 'center',
     color: theme.colors.bgLight,
@@ -16,7 +17,7 @@ const useStyles = createStyles((theme) => ({
     ...theme.other.userSelect.none,
   },
   icon: {
-    verticalAlign: 'text-top',
+    verticalAlign: 'sub',
 
     marginLeft: '4px',
     marginRight: '4px',
@@ -26,7 +27,7 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       backgroundColor: theme.colors.orenji,
-      color: 'black',
+      color: 'white',
     },
   },
 }))
@@ -42,7 +43,7 @@ export default function Footer() {
           <Text>
             Made with
             <Box component="span" className={classes.icon}>
-              <Image src="/assets/tangerine.webp" alt="tangerine" width={18} height={18} />
+              <Image src="/assets/chocolate-bar.webp" alt="chocolate bar" width={20} height={20} />
             </Box>
             by
             <Text

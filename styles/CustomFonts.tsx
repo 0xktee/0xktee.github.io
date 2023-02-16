@@ -6,36 +6,36 @@ export default function CustomFonts() {
       styles={[
         {
           '@font-face': {
-            fontFamily: 'General Sans',
-            src: `url('/assets/fonts/GeneralSans-Regular.woff2') format("woff2")`,
+            fontFamily: 'RedHat Text',
+            src: `url('/assets/fonts/RedHatText-Regular.woff2') format("woff2")`,
             fontWeight: 400,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'General Sans',
-            src: `url('/assets/fonts/GeneralSans-Medium.woff2') format("woff2")`,
+            fontFamily: 'RedHat Text',
+            src: `url('/assets/fonts/RedHatText-Medium.woff2') format("woff2")`,
             fontWeight: 500,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'General Sans',
-            src: `url('/assets/fonts/GeneralSans-Semibold.woff2') format("woff2")`,
+            fontFamily: 'RedHat Text',
+            src: `url('/assets/fonts/RedHatText-Bold.woff2') format("woff2")`,
             fontWeight: 600,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'General Sans',
-            src: `url('/assets/fonts/GeneralSans-Bold.woff2') format("woff2")`,
-            fontWeight: 700,
+            fontFamily: 'RedHat Display',
+            src: `url('/assets/fonts/RedHatDisplay-Medium.woff2') format("woff2")`,
+            fontWeight: 500,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'ZillaSlab',
-            src: `url('/assets/fonts/ZillaSlab-SemiBold.woff2') format("woff2")`,
+            fontFamily: 'RedHat Display',
+            src: `url('/assets/fonts/RedHatDisplay-Bold.woff2') format("woff2")`,
             fontWeight: 600,
           },
         },

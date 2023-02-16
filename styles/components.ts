@@ -6,11 +6,11 @@ const customComponents: MantineThemeOverride['components'] = {
       radius: 'xl',
     },
   },
-  // Divider: {
-  //   defaultProps: {
-  //     color: 'gray.2',
-  //   },
-  // },
+  Divider: {
+    defaultProps: {
+      color: 'gray.3',
+    },
+  },
 }
 
 export default customComponents

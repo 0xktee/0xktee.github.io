@@ -23,7 +23,7 @@ export default function Splash() {
   const { setSplashFinish } = useSplash()
   const [visibility, setVisibility] = useState('hidden')
 
-  const strokeColor = '#f3ef53'
+  const strokeColor = '#ef0000'
   const strokeWidth = '5'
 
   useEffect(() => {

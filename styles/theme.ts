@@ -3,7 +3,7 @@ import customComponents from './components'
 
 const theme: MantineThemeOverride = {
   // Defines color scheme for all components, defaults to "light"
-  colorScheme: 'dark',
+  colorScheme: 'light',
 
   // Default border-radius used for most elements
   defaultRadius: '8px',
@@ -11,8 +11,8 @@ const theme: MantineThemeOverride = {
   // Object of arrays with 10 colors
   colors: {
     lime: ['#d7fe38'],
-    orenji: ['#f3ef53'],
-    bgLight: ['#e9e7dd'],
+    orenji: ['#ef0000'],
+    bgLight: ['#f6f3f1'],
     bgDark: ['#181818'],
   },
 
@@ -21,15 +21,18 @@ const theme: MantineThemeOverride = {
 
   // font-family and line-height used in most components
   fontFamily:
-    'General Sans, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, sans-serif',
+    'RedHat Text, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, sans-serif',
+  fontSizes: {
+    md: 17,
+  },
 
   // h1-h6 styles, used in Title and TypographyStylesProvider components
   headings: {
-    // fontFamily: 'Lora, serif',
-    fontFamily: 'ZillaSlab, General Sans, sans-serif',
-    fontWeight: 600,
+    fontFamily: 'RedHat Display, sans-serif',
+
     sizes: {
-      h2: { fontSize: 28 },
+      h1: { fontSize: 48, fontWeight: 600 },
+      h2: { fontSize: 36, fontWeight: 500 },
     },
   },
 
@@ -37,9 +40,8 @@ const theme: MantineThemeOverride = {
     menuHeight: '48px',
 
     font: {
-      slab: {
-        fontFamily: 'ZillaSlab, sans-serif',
-        fontWeight: 600,
+      display: {
+        fontFamily: 'RedHat Display, sans-serif',
       },
     },
 

@@ -19,32 +19,30 @@ const useStyles = createStyles((theme, { variant }: ButtonProps) => ({
       height: '100%',
 
       /* other */
-      background: theme.colors.bgDark,
-      borderRadius: theme.radius.xs,
-      boxShadow: `0px 0px 0px 0.08em ${
-        variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji
-      } inset`,
+      background: theme.colors.bgLight,
+      borderRadius: 0,
+      boxShadow: `0px 0px 0px 0.08em ${theme.colors.orenji} inset`,
     },
 
     'button, a': {
       zIndex: 1,
-      backgroundColor: variant === 'outline' ? theme.colors.bgDark : theme.colors.orenji,
+      backgroundColor: '#faf9f8',
 
       fontWeight: 500,
-      color: variant === 'outline' ? 'white' : 'black',
+      color: theme.colors.orenji,
 
       transition: 'all 0.2s ease',
 
       borderWidth: '0.08em',
-      borderColor: variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji,
-      borderRadius: theme.radius.xs,
+      borderColor: theme.colors.orenji,
+      borderRadius: 0,
       boxShadow: 'none',
 
       '&:hover': {
         transform: 'translate(4px, -4px)',
-        backgroundColor: variant === 'outline' ? theme.colors.bgDark : theme.colors.orenji,
-        color: variant === 'outline' ? 'white' : 'black',
-        borderColor: variant === 'outline' ? theme.colors.bgLight : theme.colors.orenji,
+        backgroundColor: '#faf9f8',
+        color: theme.colors.orenji,
+        borderColor: theme.colors.orenji,
       },
     },
   },

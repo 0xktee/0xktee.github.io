@@ -40,9 +40,9 @@ export default function Introduce() {
           </Box>
         </Grid.Col>
         <Grid.Col span={24} xs={24} sm={24} md={17} offsetMd={1}>
-          <Title order={1} size={64}>
+          <Title order={1}>
             Heya, I&apos;m Tee.
-            <br />A Developer.
+            <br />A <i>Web Developer</i>.
           </Title>
 
           {/* <Space h="lg" />

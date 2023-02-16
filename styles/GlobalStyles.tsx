@@ -1,5 +1,5 @@
 import { Global, MantineTheme } from '@mantine/core'
-import { NOISE } from './keyframes'
+// import { NOISE } from './keyframes'
 
 export default function GlobalStyles() {
   return (
@@ -10,8 +10,8 @@ export default function GlobalStyles() {
 
           margin: 0,
 
-          backgroundColor: theme.colors.bgDark,
-          color: theme.colors.bgLight,
+          backgroundColor: theme.colors.bgLight,
+          color: 'black',
 
           textRendering: 'geometricPrecision',
           WebkitFontSmoothing: 'subpixel-antialiased',
@@ -19,27 +19,27 @@ export default function GlobalStyles() {
 
           scrollBehavior: 'smooth',
 
-          '&::before': {
-            content: '""',
-            zIndex: 50,
-            backgroundImage: `url(${'/assets/background-noise.png'})`,
-            minHeight: '100%',
-            width: '100%',
+          // '&::before': {
+          //   content: '""',
+          //   zIndex: 50,
+          //   backgroundImage: `url(${'/assets/background-noise.png'})`,
+          //   minHeight: '100%',
+          //   width: '100%',
 
-            opacity: 0.75,
+          //   opacity: 0.75,
 
-            position: 'absolute',
-            top: 0,
-            left: 0,
+          //   position: 'absolute',
+          //   top: 0,
+          //   left: 0,
 
-            animation: `0.2s infinite ${NOISE}`,
-            pointerEvents: 'none',
-          },
+          //   animation: `0.2s infinite ${NOISE}`,
+          //   pointerEvents: 'none',
+          // },
         },
 
         '::selection': {
           background: theme.colors.orenji,
-          color: 'black',
+          color: 'white',
         },
       })}
     />

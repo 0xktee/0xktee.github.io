@@ -12,9 +12,10 @@ export default function About() {
 
   return (
     <Container className={classes.container} size="xs">
-      <Title order={2}>About Myself.</Title>
+      <Title order={2}>About myself</Title>
 
-      <Space h="xs" />
+      <Space h="xl" />
+
       <Text size="md">
         My journey started in high school with C programming class. I really enjoy problem-solving
         and logical thinking, at that time my journey in tech is just getting started.

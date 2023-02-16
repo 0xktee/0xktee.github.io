@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import { createStyles, Button, Navbar, Text, Box } from '@mantine/core'
-
-import { IconApple } from '@tabler/icons-react'
+import Image from 'next/image'
 
 const useStyles = createStyles((theme) => ({
   navbar: {
     // overflow: 'hidden',
-    backgroundColor: theme.colors.orenji,
+    backgroundColor: theme.colors.bgDark,
+    borderColor: 'black',
 
-    color: 'black',
+    color: 'white',
     fontSize: '18px',
 
     ...theme.other.userSelect.none,
@@ -26,6 +26,7 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translate(-50%,-50%)',
     transformOrigin: '0 0',
 
+    ...theme.other.font.display,
     fontWeight: 600,
 
     whiteSpace: 'nowrap',
@@ -39,12 +40,14 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translateY(50%)',
     transformOrigin: 'bottom left',
 
-    borderColor: 'rgba(0, 0, 0, 0.75)',
-    color: 'black',
+    borderColor: 'rgba(255, 255, 255, 0.35)',
+    color: 'white',
     fontWeight: 500,
 
     ':hover': {
-      backgroundColor: 'black',
+      backgroundColor: theme.colors.orenji,
+      borderColor: theme.colors.orenji,
+
       color: 'white',
     },
 
@@ -76,7 +79,7 @@ export default function LeftBar() {
             transition: { repeat: Infinity, duration: 1, ease: 'linear' },
           }}
         >
-          <IconApple size={28} stroke={1.8} />
+          <Image src="/assets/chocolate-bar.webp" alt="chocolate bar" width={28} height={28} />
         </motion.div>
       </Box>
       <Text className={classes.text}>korrawich khosripetch</Text>

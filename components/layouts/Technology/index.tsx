@@ -55,13 +55,19 @@ export default function Technology() {
 
   return (
     <Container className={classes.container} size="md" py="xl">
-      <Title order={2}>Loved Technologies.</Title>
+      <Title order={2}>Worked on technologies</Title>
 
-      <Space h="xl" />
+      <Space h="xs" />
+
+      <Text size="md">
+        These are some of the technologies that I have used for working on various projects.
+      </Text>
+
+      <Space h={32} />
 
       <Grid gutter={32}>
         <Grid.Col span={12} xs={5} sm={4}>
-          <Text align="left" size="sm" weight={600}>
+          <Text align="left" size="sm" weight={500}>
             Programming Languages
           </Text>
 
@@ -75,7 +81,7 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={7} sm={8}>
-          <Text align="left" size="sm" weight={600}>
+          <Text align="left" size="sm" weight={500}>
             Web Development
           </Text>
 
@@ -95,7 +101,7 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={5} sm={4}>
-          <Text align="left" size="sm" weight={600}>
+          <Text align="left" size="sm" weight={500}>
             Web 3
           </Text>
 
@@ -108,7 +114,7 @@ export default function Technology() {
         </Grid.Col>
 
         <Grid.Col span={12} xs={7} sm={8}>
-          <Text align="left" size="sm" weight={600}>
+          <Text align="left" size="sm" weight={500}>
             Tools
           </Text>
           <Divider my="xs" />
