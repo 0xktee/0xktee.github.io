@@ -39,7 +39,9 @@ export default function Technology() {
      */
     // const CUSTOM_SIZE = ICON_SIZE - 5
 
-    return <Image src={props.src} alt={props.alt} width={ICON_SIZE} height={ICON_SIZE} />
+    return (
+      <Image src={props.src} alt={props.alt} width={ICON_SIZE} height={ICON_SIZE} priority={true} />
+    )
   }
 
   const Tech = (props: any) => {
