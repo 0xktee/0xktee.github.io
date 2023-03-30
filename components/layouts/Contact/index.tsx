@@ -10,13 +10,7 @@ import {
   Title,
   Tooltip,
 } from '@mantine/core'
-import {
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandMedium,
-  IconCheck,
-  IconCopy,
-} from '@tabler/icons-react'
+import { IconCheck, IconCopy, IconArrowUpRight } from '@tabler/icons-react'
 
 import ButtonCustom from '../../ButtonCustom'
 
@@ -29,7 +23,7 @@ const useStyles = createStyles((theme) => ({
     height: '56px',
 
     '.mantine-Button-inner': {
-      justifyContent: 'flex-start',
+      justifyContent: 'space-between',
     },
   },
 }))
@@ -53,8 +47,7 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
-            leftIcon={<IconBrandLinkedin />}
+            rightIcon={<IconArrowUpRight size={20} />}
             fullWidth
             component="a"
             href="https://linkedin.com/in/korrawich-khosripetch"
@@ -68,8 +61,7 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
-            leftIcon={<IconBrandGithub />}
+            rightIcon={<IconArrowUpRight size={20} />}
             fullWidth
             component="a"
             href="https://github.com/zkorra"
@@ -83,8 +75,7 @@ export default function Contact() {
         <Grid.Col span={12} xs={4} sm={4}>
           <ButtonCustom
             className={classes.button}
-            variant="outline"
-            leftIcon={<IconBrandMedium />}
+            rightIcon={<IconArrowUpRight size={20} />}
             fullWidth
             component="a"
             href="https://zkorra.medium.com"

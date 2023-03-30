@@ -11,7 +11,7 @@ const theme: MantineThemeOverride = {
   // Object of arrays with 10 colors
   colors: {
     lime: ['#d7fe38'],
-    orenji: ['#ef0000'],
+    orenji: ['#0062ff'],
     bgLight: ['#f6f3f1'],
     bgDark: ['#181818'],
   },

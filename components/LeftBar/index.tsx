@@ -79,7 +79,7 @@ export default function LeftBar() {
             transition: { repeat: Infinity, duration: 1, ease: 'linear' },
           }}
         >
-          <Image src="/assets/chocolate-bar.webp" alt="chocolate bar" width={28} height={28} />
+          <Image src="/assets/penguin_1f427.webp" alt="penguin" width={28} height={28} />
         </motion.div>
       </Box>
       <Text className={classes.text}>korrawich khosripetch</Text>

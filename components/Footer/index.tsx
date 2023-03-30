@@ -43,7 +43,7 @@ export default function Footer() {
           <Text>
             Made with
             <Box component="span" className={classes.icon}>
-              <Image src="/assets/chocolate-bar.webp" alt="chocolate bar" width={20} height={20} />
+              <Image src="/assets/penguin_1f427.webp" alt="penguin" width={20} height={20} />
             </Box>
             by
             <Text

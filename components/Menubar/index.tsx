@@ -7,7 +7,7 @@ const useStyles = createStyles((theme) => ({
     transition: 'background 0.1s, padding 0.3s, box-shadow 0.5s',
 
     position: 'relative',
-    background: 'transparent',
+    background: theme.colors.orenji,
 
     border: 'none',
   },
@@ -27,20 +27,20 @@ const useStyles = createStyles((theme) => ({
 
     background: 'transparent',
 
-    color: 'black',
+    color: 'white',
 
     fontWeight: 500,
     border: 'none',
 
     ':hover': {
-      background: 'black',
+      background: theme.colors.bgDark,
       color: 'white',
     },
   },
   buttonLogo: {
     background: 'transparent',
 
-    color: theme.colors.orenji,
+    color: 'white',
 
     ...theme.other.font.display,
     fontWeight: 600,

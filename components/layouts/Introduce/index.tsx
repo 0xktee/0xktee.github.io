@@ -1,14 +1,23 @@
 import Image from 'next/image'
 
 import { useWindowScroll } from '@mantine/hooks'
-import { Box, Container, Title, Text, Grid, createStyles, Space } from '@mantine/core'
-
-import ButtonCustom from '../../ButtonCustom'
+import { Box, Container, Title, Text, Grid, createStyles, Space, Button } from '@mantine/core'
+import { IconArrowDown } from '@tabler/icons-react'
 
 const useStyles = createStyles((theme) => ({
+  outer: {
+    background: theme.colors.orenji,
+
+    '::selection': {
+      background: 'red',
+      color: 'white',
+    },
+  },
   container: {
-    minHeight: `calc(100vh - ${theme.other.menuHeight})`,
+    minHeight: `calc(80vh - ${theme.other.menuHeight})`,
     ...theme.other.flexCenter,
+
+    color: 'white',
   },
   wrapper: {
     position: 'relative',
@@ -25,6 +34,23 @@ const useStyles = createStyles((theme) => ({
       ...theme.other.userDrag.none,
     },
   },
+  button: {
+    transition: 'background 0.2s, color 0.1s',
+
+    background: theme.colors.bgDark,
+
+    color: 'white',
+
+    fontWeight: 500,
+    border: 'none',
+
+    borderRadius: '0px',
+
+    ':hover': {
+      background: 'black',
+      color: 'white',
+    },
+  },
 }))
 
 export default function Introduce() {
@@ -32,41 +58,43 @@ export default function Introduce() {
   const [scroll, scrollTo] = useWindowScroll()
 
   return (
-    <Container className={classes.container} size="md" pb="md">
-      <Grid columns={24} align="center" px="md">
-        <Grid.Col span={9} xs={8} sm={6} md={6}>
-          <Box className={classes.wrapper}>
-            <Image src="/assets/me.webp" alt="knwch" layout="fill" priority={true} />
-          </Box>
-        </Grid.Col>
-        <Grid.Col span={24} xs={24} sm={24} md={17} offsetMd={1}>
-          <Title order={1}>
-            Heya, I&apos;m Tee.
-            <br />A <i>Web Developer</i>.
-          </Title>
+    <Box className={classes.outer}>
+      <Container className={classes.container} size="md" pb="md">
+        <Grid columns={24} align="center" px="md">
+          <Grid.Col span={9} xs={8} sm={6} md={6}>
+            <Box className={classes.wrapper}>
+              <Image src="/assets/me.webp" alt="knwch" layout="fill" priority={true} />
+            </Box>
+          </Grid.Col>
+          <Grid.Col span={24} xs={24} sm={24} md={17} offsetMd={1}>
+            <Title order={1}>
+              Heya, I&apos;m Tee.
+              <br />A <i>Web Developer</i>.
+            </Title>
 
-          {/* <Space h="lg" />
+            <Space h="xs" />
 
-          <Text size="md" color="dimmed">
-            /korrawich khosripetch/
-          </Text> */}
+            <Text size="md">
+              I&apos;m a junior developer, who love learning and building stuff. I have a passion to
+              bring a wonderful experience for people through technology. I&apos;m based in
+              Thailand.
+            </Text>
 
-          <Space h="xs" />
+            <Space h="xl" />
 
-          <Text size="md">
-            I&apos;m a junior developer, who love learning and building stuff. I have a passion to
-            bring a wonderful experience for people through technology. I&apos;m based in Thailand.
-          </Text>
+            <Button
+              className={classes.button}
+              variant="default"
+              onClick={() => scrollTo({ y: 5000 })}
+              rightIcon={<IconArrowDown size={15} />}
+            >
+              Get in touch
+            </Button>
+          </Grid.Col>
+        </Grid>
 
-          <Space h="xl" />
-
-          <ButtonCustom variant="outline" onClick={() => scrollTo({ y: 5000 })}>
-            Reach me
-          </ButtonCustom>
-        </Grid.Col>
-      </Grid>
-
-      <Space h={64} />
-    </Container>
+        <Space h={64} />
+      </Container>
+    </Box>
   )
 }
