@@ -15,8 +15,6 @@ import {
 } from '@mantine/core'
 import Image, { ImageProps } from 'next/image'
 
-import { IconBrandMantine } from '@tabler/icons-react'
-
 const useStyles = createStyles((theme) => ({
   outer: {
     background: theme.colors.orenji,
@@ -106,15 +104,12 @@ export default function Technology() {
               <Divider my="xs" />
 
               <SimpleGrid cols={2} spacing={0}>
-                <Tech label="React" icon={<IconImage src="/assets/technologies/cib-react.svg" />} />
+                <Tech label="React" icon="/assets/technologies/cib-react.svg" />
+                <Tech label="Angular" icon="/assets/technologies/cib-angular.svg" />
                 <Tech label="Next.js" icon="/assets/technologies/cib-next-js.svg" />
                 <Tech label="Node.js" icon="/assets/technologies/cib-node-js.svg" />
-                <Tech label="Framer Motion" icon="/assets/technologies/cib-framer.svg" />
-                <Tech
-                  label="Mantine"
-                  icon={<IconBrandMantine size={ICON_SIZE} stroke={1.3} viewBox="2 2 20 20" />}
-                />
                 <Tech label="Scss" icon="/assets/technologies/cib-sass.svg" />
+                <Tech label="Framer Motion" icon="/assets/technologies/cib-framer.svg" />
               </SimpleGrid>
             </Card>
           </Grid.Col>
@@ -122,7 +117,7 @@ export default function Technology() {
           <Grid.Col span={12} xs={5} sm={4}>
             <Card className={classes.card}>
               <Text align="left" size="sm" weight={500}>
-                Web 3
+                Web3
               </Text>
 
               <Divider my="xs" />

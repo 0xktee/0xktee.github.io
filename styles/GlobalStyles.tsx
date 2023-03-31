@@ -38,7 +38,7 @@ export default function GlobalStyles() {
         },
 
         '::selection': {
-          background: theme.colors.orenji,
+          background: theme.colors.bgDark,
           color: 'white',
         },
       })}
