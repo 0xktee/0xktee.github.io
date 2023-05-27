@@ -23,6 +23,12 @@ export default function About() {
 
       <Space h="md" />
       <Text size="md">
+        I have experience working on both frontend and backend side. As well as, machine learning
+        and blockchain technology stuff.
+      </Text>
+
+      {/* <Space h="md" />
+      <Text size="md">
         After I graduated with a bachelor&apos;s degree in Applied Computer Science in 2021.
         I&apos;m driven by a passion for Web3 and successfully launched my own NFT project from
         scratch. I also had fun building utility products for users in the space.
@@ -33,7 +39,7 @@ export default function About() {
         In order to grow my career as a developer and fulfilling my passion for technology, Joining
         and learning with a talented team at technology companies that create software solutions
         that positively impact people is perfect for me.
-      </Text>
+      </Text> */}
     </Container>
   )
 }
