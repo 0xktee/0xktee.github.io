@@ -75,9 +75,8 @@ export default function Introduce() {
             <Space h="xs" />
 
             <Text size="md">
-              I&apos;m a junior developer, who love learning and building stuff. I have a passion to
-              bring a wonderful experience for people through technology. I&apos;m based in
-              Thailand.
+              I&apos;m a developer who is always learning things. Experienced in working with both
+              frontend and backend. Focused on following the best practices for building stuff.
             </Text>
 
             <Space h="xl" />

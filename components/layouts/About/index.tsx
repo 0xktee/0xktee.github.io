@@ -17,29 +17,23 @@ export default function About() {
       <Space h="xl" />
 
       <Text size="md">
-        My journey started in high school with C programming class. I really enjoy problem-solving
-        and logical thinking, at that time my journey in tech is just getting started.
+        I&apos;m a developer with a keen interest in learning new technologies and gaining
+        experience in the industry. I&apos;m capable of working with various programming languages
+        and tools. My technical skills include web development, decentralized application
+        development, and machine learning.
       </Text>
 
       <Space h="md" />
       <Text size="md">
-        I have experience working on both frontend and backend side. As well as, machine learning
-        and blockchain technology stuff.
-      </Text>
-
-      {/* <Space h="md" />
-      <Text size="md">
-        After I graduated with a bachelor&apos;s degree in Applied Computer Science in 2021.
-        I&apos;m driven by a passion for Web3 and successfully launched my own NFT project from
-        scratch. I also had fun building utility products for users in the space.
+        I&apos;m passionate about following the best practices to ensure I&apos;m building stuff
+        correctly and providing the best solutions possible. Also, loving following industry trends
+        to adapt myself and catch up on cool stuff.
       </Text>
 
       <Space h="md" />
       <Text size="md">
-        In order to grow my career as a developer and fulfilling my passion for technology, Joining
-        and learning with a talented team at technology companies that create software solutions
-        that positively impact people is perfect for me.
-      </Text> */}
+        Always looking for the opportunities to challenge myself and expand my knowledge.
+      </Text>
     </Container>
   )
 }
