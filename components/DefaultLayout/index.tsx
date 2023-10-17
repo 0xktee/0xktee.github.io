@@ -27,12 +27,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
             ease: 'easeIn',
           }}
         >
-          <AppShell
-            padding={0}
-            navbarOffsetBreakpoint="sm"
-            navbar={<LeftBar />}
-            footer={<Footer />}
-          >
+          <AppShell padding={0} navbarOffsetBreakpoint="sm" navbar={<LeftBar />}>
             <Menubar />
             {children}
           </AppShell>

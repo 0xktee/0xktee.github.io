@@ -6,37 +6,23 @@ export default function CustomFonts() {
       styles={[
         {
           '@font-face': {
-            fontFamily: 'RedHat Text',
-            src: `url('/assets/fonts/RedHatText-Regular.woff2') format("woff2")`,
+            fontFamily: 'LINE Seed Sans',
+            src: `url('/assets/fonts/LINESeedSans_W_Rg.woff2') format("woff2")`,
             fontWeight: 400,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'RedHat Text',
-            src: `url('/assets/fonts/RedHatText-Medium.woff2') format("woff2")`,
-            fontWeight: 500,
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'RedHat Text',
-            src: `url('/assets/fonts/RedHatText-Bold.woff2') format("woff2")`,
+            fontFamily: 'LINE Seed Sans',
+            src: `url('/assets/fonts/LINESeedSans_W_Bd.woff2') format("woff2")`,
             fontWeight: 600,
           },
         },
         {
           '@font-face': {
-            fontFamily: 'RedHat Display',
-            src: `url('/assets/fonts/RedHatDisplay-Medium.woff2') format("woff2")`,
-            fontWeight: 500,
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'RedHat Display',
-            src: `url('/assets/fonts/RedHatDisplay-Bold.woff2') format("woff2")`,
-            fontWeight: 600,
+            fontFamily: 'LINE Seed Sans',
+            src: `url('/assets/fonts/LINESeedSans_W_XBd.woff2') format("woff2")`,
+            fontWeight: 700,
           },
         },
       ]}

@@ -2,7 +2,6 @@ import { Container, createStyles, Space, Text, Title } from '@mantine/core'
 
 const useStyles = createStyles((theme) => ({
   container: {
-    minHeight: '100vh',
     ...theme.other.flexCenter,
   },
 }))
@@ -11,10 +10,12 @@ export default function About() {
   const { classes } = useStyles()
 
   return (
-    <Container className={classes.container} size="xs">
-      <Title order={2}>About myself</Title>
+    <Container size="md">
+      <Title order={3} weight={600}>
+        About myself
+      </Title>
 
-      <Space h="xl" />
+      <Space h="xs" />
 
       <Text size="md">
         I&apos;m a developer with a keen interest in learning new technologies and gaining

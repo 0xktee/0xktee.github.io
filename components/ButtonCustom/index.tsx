@@ -21,26 +21,26 @@ const useStyles = createStyles((theme, { variant }: ButtonProps) => ({
       /* other */
       background: theme.colors.gray[3],
       borderRadius: 0,
-      boxShadow: `0px 0px 0px 1px black inset`,
+      boxShadow: `0px 0px 0px 2px #333333 inset`,
     },
 
     'button, a': {
       zIndex: 1,
       backgroundColor: 'white',
 
-      fontWeight: 500,
-      color: 'black',
+      fontWeight: 400,
+      color: theme.colors.bgDark,
 
       transition: 'all 0.2s ease',
 
       border: 'none',
       borderRadius: 0,
 
-      boxShadow: `0px 0px 0px 1px black inset`,
+      boxShadow: `0px 0px 0px 2px #333333 inset`,
 
       '&:hover': {
-        transform: 'translate(4px, -4px)',
-        backgroundColor: 'white',
+        transform: 'translate(6px, -6px)',
+        backgroundColor: theme.colors.main,
         color: 'black',
       },
     },

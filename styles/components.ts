@@ -8,7 +8,7 @@ const customComponents: MantineThemeOverride['components'] = {
   },
   Divider: {
     defaultProps: {
-      color: 'black',
+      color: '#333333',
     },
   },
 }

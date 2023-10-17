@@ -1,4 +1,4 @@
-import { Divider } from '@mantine/core'
+import { Container, Divider, Space } from '@mantine/core'
 
 import Introduce from '../components/layouts/Introduce'
 import About from '../components/layouts/About'
@@ -10,13 +10,29 @@ import { Fragment } from 'react'
 export default function HomePage() {
   return (
     <Fragment>
+      <Space h={64} />
+
       <Introduce />
-      <Divider />
+
+      <Space h={64} />
+
+      <Container size="md">
+        <Divider size={2} />
+      </Container>
+
+      <Space h={64} />
+
       <About />
-      <Divider />
+
+      <Space h={64} />
+
       <Technology />
-      <Divider />
+
+      <Space h={64} />
+
       <Contact />
+
+      <Space h="xl" />
     </Fragment>
   )
 }

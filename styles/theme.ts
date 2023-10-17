@@ -11,9 +11,10 @@ const theme: MantineThemeOverride = {
   // Object of arrays with 10 colors
   colors: {
     lime: ['#d7fe38'],
+    main: ['#ffd43d'],
     orenji: ['#0062ff'],
-    bgLight: ['#f6f3f1'],
-    bgDark: ['#181818'],
+    bgLight: ['#efefef'],
+    bgDark: ['#333333'],
   },
 
   // Should be key of theme.colors, cannot be actual color value
@@ -21,29 +22,25 @@ const theme: MantineThemeOverride = {
 
   // font-family and line-height used in most components
   fontFamily:
-    'RedHat Text, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, sans-serif',
+    'LINE Seed Sans, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, sans-serif',
   fontSizes: {
-    md: 17,
+    xs: 14,
+    sm: 16,
+    md: 18,
   },
 
   // h1-h6 styles, used in Title and TypographyStylesProvider components
   headings: {
-    fontFamily: 'RedHat Display, sans-serif',
+    fontFamily: 'LINE Seed Sans, sans-serif',
 
     sizes: {
       h1: { fontSize: 48, fontWeight: 600 },
-      h2: { fontSize: 36, fontWeight: 500 },
+      h2: { fontSize: 36, fontWeight: 400 },
     },
   },
 
   other: {
-    menuHeight: '48px',
-
-    font: {
-      display: {
-        fontFamily: 'RedHat Display, sans-serif',
-      },
-    },
+    menuHeight: '64px',
 
     flexCenter: {
       display: 'flex',

@@ -7,12 +7,12 @@ const useStyles = createStyles((theme) => ({
     transition: 'background 0.1s, padding 0.3s, box-shadow 0.5s',
 
     position: 'relative',
-    background: theme.colors.orenji,
+    background: 'transparent',
 
     border: 'none',
   },
   inner: {
-    height: theme.other.menuHeight,
+    height: '100%',
 
     display: 'flex',
     justifyContent: 'space-between',
@@ -27,9 +27,7 @@ const useStyles = createStyles((theme) => ({
 
     background: 'transparent',
 
-    color: 'white',
-
-    fontWeight: 500,
+    fontWeight: 400,
     border: 'none',
 
     ':hover': {
@@ -40,9 +38,7 @@ const useStyles = createStyles((theme) => ({
   buttonLogo: {
     background: 'transparent',
 
-    color: 'white',
-
-    ...theme.other.font.display,
+    color: theme.colors.bgDark,
     fontWeight: 600,
     fontSize: '1.5rem',
 
@@ -76,9 +72,9 @@ export default function MenuBar() {
   }
 
   return (
-    <Header className={classes.outer} height={other.menuHeight} pt="md">
-      <Container className={classes.inner} size="md">
-        <Button className={classes.buttonLogo} variant="default">
+    <Header className={classes.outer} height={other.menuHeight}>
+      <Container className={classes.inner}>
+        <Button className={classes.buttonLogo} variant="default" px={0}>
           zkorra.
         </Button>
 

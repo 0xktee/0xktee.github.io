@@ -11,9 +11,6 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     textAlign: 'center',
   },
-  header: {
-    ...theme.other.font.serif,
-  },
 }))
 
 export default function NotFoundPage() {
@@ -21,7 +18,7 @@ export default function NotFoundPage() {
 
   return (
     <Container className={classes.container} size="xs">
-      <Text className={classes.header} size={90} mb="-md">
+      <Text size={90} weight={600}>
         404
       </Text>
       <Text size="md">Oh no! Somethings gone missing...</Text>

@@ -11,7 +11,7 @@ export default function GlobalStyles() {
           margin: 0,
 
           backgroundColor: theme.colors.bgLight,
-          color: 'black',
+          color: theme.colors.bgDark,
 
           textRendering: 'geometricPrecision',
           WebkitFontSmoothing: 'subpixel-antialiased',

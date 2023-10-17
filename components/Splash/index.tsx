@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
     ...theme.other.flexCenter,
   },
-  number: { fontSize: '1.1rem', color: theme.colors.orenji },
+  number: { fontSize: '1.1rem' },
 }))
 
 export default function Splash() {
@@ -23,7 +23,7 @@ export default function Splash() {
   const { setSplashFinish } = useSplash()
   const [visibility, setVisibility] = useState('hidden')
 
-  const strokeColor = '#0062ff'
+  const strokeColor = '#333333'
   const strokeWidth = '3'
 
   useEffect(() => {

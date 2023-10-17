@@ -5,11 +5,12 @@ import Image from 'next/image'
 const useStyles = createStyles((theme) => ({
   navbar: {
     // overflow: 'hidden',
-    backgroundColor: theme.colors.bgDark,
-    borderColor: 'black',
+    backgroundColor: theme.colors.main,
 
-    color: 'white',
-    fontSize: '18px',
+    borderColor: 'black',
+    borderWidth: '2px',
+
+    color: 'black',
 
     ...theme.other.userSelect.none,
   },
@@ -26,9 +27,6 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translate(-50%,-50%)',
     transformOrigin: '0 0',
 
-    ...theme.other.font.display,
-    fontWeight: 600,
-
     whiteSpace: 'nowrap',
   },
   button: {
@@ -40,14 +38,12 @@ const useStyles = createStyles((theme) => ({
     transform: 'rotate(-90deg) translateY(50%)',
     transformOrigin: 'bottom left',
 
-    borderColor: 'rgba(255, 255, 255, 0.35)',
-    color: 'white',
-    fontWeight: 500,
+    // borderColor: 'rgba(0, 0, 0, 0.05)',
+    borderWidth: '2px',
+    color: 'black',
 
     ':hover': {
-      backgroundColor: theme.colors.orenji,
-      borderColor: theme.colors.orenji,
-
+      backgroundColor: 'black',
       color: 'white',
     },
 
@@ -82,7 +78,9 @@ export default function LeftBar() {
           <Image src="/assets/penguin_1f427.webp" alt="penguin" width={28} height={28} />
         </motion.div>
       </Box>
-      <Text className={classes.text}>korrawich khosripetch</Text>
+      <Text className={classes.text} weight={600}>
+        korrawich khosripetch
+      </Text>
       <Button
         className={classes.button}
         variant="outline"
