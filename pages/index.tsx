@@ -1,11 +1,10 @@
-import { Container, Divider, Space } from '@mantine/core'
+import { Container, Divider, Space } from "@mantine/core";
 
-import Introduce from '../components/layouts/Introduce'
-import About from '../components/layouts/About'
-import Technology from '../components/layouts/Technology'
-import Contact from '../components/layouts/Contact'
+import Introduce from "../components/layouts/Introduce";
+import Technology from "../components/layouts/Technology";
+import Contact from "../components/layouts/Contact";
 
-import { Fragment } from 'react'
+import { Fragment } from "react";
 
 export default function HomePage() {
   return (
@@ -13,16 +12,6 @@ export default function HomePage() {
       <Space h={64} />
 
       <Introduce />
-
-      <Space h={64} />
-
-      <Container size="md">
-        <Divider size={2} />
-      </Container>
-
-      <Space h={64} />
-
-      <About />
 
       <Space h={64} />
 
@@ -34,5 +23,5 @@ export default function HomePage() {
 
       <Space h="xl" />
     </Fragment>
-  )
+  );
 }

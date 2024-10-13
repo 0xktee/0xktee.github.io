@@ -1,39 +1,39 @@
-import { Fragment } from 'react'
-import Image from 'next/image'
+import { Fragment } from "react";
+import Image from "next/image";
 
-import { Box, Text, createStyles, Divider } from '@mantine/core'
+import { Box, Text, createStyles, Divider } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   container: {
-    position: 'relative',
+    position: "relative",
     zIndex: 80,
 
     background: theme.colors.bgDark,
-    borderColor: 'black',
+    borderColor: "black",
 
-    textAlign: 'center',
+    textAlign: "center",
     color: theme.colors.bgLight,
 
     ...theme.other.userSelect.none,
   },
   icon: {
-    verticalAlign: 'sub',
+    verticalAlign: "sub",
 
-    marginLeft: '4px',
-    marginRight: '4px',
+    marginLeft: "4px",
+    marginRight: "4px",
   },
   link: {
-    textDecoration: 'none',
+    textDecoration: "none",
 
-    '&:hover': {
+    "&:hover": {
       backgroundColor: theme.colors.orenji,
-      color: 'white',
+      color: "white",
     },
   },
-}))
+}));
 
 export default function Footer() {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
 
   return (
     <Fragment>
@@ -43,7 +43,12 @@ export default function Footer() {
           <Text>
             Made with
             <Box component="span" className={classes.icon}>
-              <Image src="/assets/penguin_1f427.webp" alt="penguin" width={20} height={20} />
+              <Image
+                src="/assets/penguin_1f427.webp"
+                alt="penguin"
+                width={20}
+                height={20}
+              />
             </Box>
             by
             <Text
@@ -51,15 +56,15 @@ export default function Footer() {
               className={classes.link}
               weight={600}
               px={4}
-              href="https://github.com/zkorra"
+              href="https://github.com/0xktee"
               target="_blank"
               rel="noreferrer"
             >
-              zkorra.
+              0xktee.
             </Text>
           </Text>
         </footer>
       </Box>
     </Fragment>
-  )
+  );
 }

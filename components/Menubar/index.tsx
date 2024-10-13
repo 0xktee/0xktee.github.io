@@ -1,60 +1,67 @@
-import { Container, createStyles, Group, Header, useMantineTheme, Button } from '@mantine/core'
+import {
+  Container,
+  createStyles,
+  Group,
+  Header,
+  useMantineTheme,
+  Button,
+} from "@mantine/core";
 
-import { IconArrowUpRight } from '@tabler/icons-react'
+import { IconArrowUpRight } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   outer: {
-    transition: 'background 0.1s, padding 0.3s, box-shadow 0.5s',
+    transition: "background 0.1s, padding 0.3s, box-shadow 0.5s",
 
-    position: 'relative',
-    background: 'transparent',
+    position: "relative",
+    background: "transparent",
 
-    border: 'none',
+    border: "none",
   },
   inner: {
-    height: '100%',
+    height: "100%",
 
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
 
     ...theme.other.userSelect.none,
 
-    'a, img': { ...theme.other.userDrag.none },
+    "a, img": { ...theme.other.userDrag.none },
   },
   button: {
-    transition: 'background 0.2s, color 0.1s',
+    transition: "background 0.2s, color 0.1s",
 
-    background: 'transparent',
+    background: "transparent",
 
     fontWeight: 400,
-    border: 'none',
+    border: "none",
 
-    ':hover': {
+    ":hover": {
       background: theme.colors.bgDark,
-      color: 'white',
+      color: "white",
     },
   },
   buttonLogo: {
-    background: 'transparent',
+    background: "transparent",
 
     color: theme.colors.bgDark,
     fontWeight: 600,
-    fontSize: '1.5rem',
+    fontSize: "1.5rem",
 
-    border: 'none',
+    border: "none",
     borderRadius: 0,
 
-    pointerEvents: 'none',
+    pointerEvents: "none",
   },
-}))
+}));
 
 export default function MenuBar() {
-  const { classes } = useStyles()
-  const { other } = useMantineTheme()
+  const { classes } = useStyles();
+  const { other } = useMantineTheme();
 
   const ButtonNavigator = (props: any) => {
-    const { children, href } = props
+    const { children, href } = props;
 
     return (
       <Button
@@ -68,14 +75,14 @@ export default function MenuBar() {
       >
         {children}
       </Button>
-    )
-  }
+    );
+  };
 
   return (
     <Header className={classes.outer} height={other.menuHeight}>
       <Container className={classes.inner}>
         <Button className={classes.buttonLogo} variant="default" px={0}>
-          zkorra.
+          0xktee.
         </Button>
 
         <Group spacing="xs" px={0}>
@@ -83,9 +90,11 @@ export default function MenuBar() {
             LinkedIn
           </ButtonNavigator>
 
-          <ButtonNavigator href="https://github.com/zkorra">Github</ButtonNavigator>
+          <ButtonNavigator href="https://github.com/0xktee">
+            Github
+          </ButtonNavigator>
         </Group>
       </Container>
     </Header>
-  )
+  );
 }

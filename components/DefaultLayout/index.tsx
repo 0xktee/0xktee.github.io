@@ -1,24 +1,37 @@
-import React, { Fragment, ReactNode } from 'react'
-import { AppShell } from '@mantine/core'
-import { motion } from 'framer-motion'
+import React, { Fragment, ReactNode } from "react";
+import { AppShell } from "@mantine/core";
+import { motion } from "framer-motion";
 
-import { useSplash } from '../../contexts/SplashContext'
+// import { useSplash } from "../../contexts/SplashContext";
 
-import Menubar from '../Menubar'
-import Footer from '../Footer'
-import Splash from '../Splash'
-import LeftBar from '../LeftBar'
+import Menubar from "../Menubar";
+// import Splash from "../Splash";
+import LeftBar from "../LeftBar";
 
 type DefaultLayoutProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
-  const { splashFinished } = useSplash()
+  // const { splashFinished } = useSplash();
 
   return (
     <Fragment>
-      {splashFinished ? (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.7,
+          ease: "easeIn",
+        }}
+      >
+        <AppShell padding={0} navbarOffsetBreakpoint="sm" navbar={<LeftBar />}>
+          <Menubar />
+          {children}
+        </AppShell>
+      </motion.div>
+
+      {/* {splashFinished ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -34,7 +47,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         </motion.div>
       ) : (
         <Splash />
-      )}
+      )} */}
     </Fragment>
-  )
-}
+  );
+};

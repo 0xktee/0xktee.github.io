@@ -1,47 +1,56 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { useWindowScroll } from '@mantine/hooks'
-import { Box, Container, Title, Text, Grid, createStyles, Space, Button } from '@mantine/core'
-import { IconArrowDown } from '@tabler/icons-react'
+import { useWindowScroll } from "@mantine/hooks";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  Grid,
+  createStyles,
+  Space,
+  Button,
+} from "@mantine/core";
+import { IconArrowDown } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    position: 'relative',
-    width: '100%',
-    paddingBottom: '100%',
+    position: "relative",
+    width: "100%",
+    paddingBottom: "100%",
     // paddingBottom: '120%',
-    overflow: 'hidden',
+    overflow: "hidden",
 
-    borderRadius: '1024px',
+    borderRadius: "1024px",
 
     ...theme.other.userSelect.none,
 
-    'svg, img': {
+    "svg, img": {
       ...theme.other.userDrag.none,
     },
   },
   button: {
-    transition: 'background 0.2s, color 0.1s',
+    transition: "background 0.2s, color 0.1s",
 
     background: theme.colors.bgDark,
 
-    color: 'white',
+    color: "white",
 
     fontWeight: 400,
-    border: 'none',
+    border: "none",
 
-    borderRadius: '0px',
+    borderRadius: "0px",
 
-    ':hover': {
-      background: 'black',
-      color: 'white',
+    ":hover": {
+      background: "black",
+      color: "white",
     },
   },
-}))
+}));
 
 export default function Introduce() {
-  const { classes } = useStyles()
-  const [scroll, scrollTo] = useWindowScroll()
+  const { classes } = useStyles();
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <Container size="md">
@@ -55,9 +64,9 @@ export default function Introduce() {
           <Space h="xs" />
 
           <Text size="md">
-            I&apos;m a developer with experience working in both frontend and backend software
-            development. My passion is to bring seamless experience for end users and focus on
-            following the best practices.
+            I&apos;m a developer with experienced in both frontend and backend,
+            passionate about creating buttery-smooth user experiences and some
+            random stuff.
           </Text>
 
           <Space h="xl" />
@@ -73,10 +82,15 @@ export default function Introduce() {
         </Grid.Col>
         <Grid.Col span={9} xs={8} sm={6} md={6} offsetMd={1}>
           <Box className={classes.wrapper}>
-            <Image src="/assets/me.webp" alt="knwch" layout="fill" priority={true} />
+            <Image
+              src="/assets/me.webp"
+              alt="knwch"
+              layout="fill"
+              priority={true}
+            />
           </Box>
         </Grid.Col>
       </Grid>
     </Container>
-  )
+  );
 }
