@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerTrigger asChild>
-            <Button variant="link" size="icon">
+            <Button variant="ghost" size="icon">
               <Menu />
             </Button>
           </DrawerTrigger>
